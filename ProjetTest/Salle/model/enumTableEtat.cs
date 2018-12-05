@@ -6,7 +6,8 @@ namespace Salle.model
 {
     public enum enumTableClient
     {
-         prise, vide,
+        prise,
+        vide,
     }
 
     public enum enumTableProprete
