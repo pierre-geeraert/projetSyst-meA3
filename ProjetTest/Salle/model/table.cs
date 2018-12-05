@@ -7,6 +7,12 @@ namespace Salle.model
     public class Table
     {
         int tableX;
+
+        public int getLibre()
+        {
+            return 1;
+        }
+
         int tableY;
         public Table()
         {
