@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace ProjetTest
+namespace Salle
 {
     class Program
     {
         static void Main(string[] args)
         {
-            ProjetTest.view.test.ecrire();
+            Console.WriteLine("Hello World!");
         }
     }
 }
