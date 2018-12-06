@@ -7,8 +7,8 @@ namespace Salle.model
     {
         public (int , int) tableLibre(int taille)
         {
-            int libreX;
-            int libreY;
+            int libreX = 0;
+            int libreY = 0;
             Table table = new Table();
             if (table.getLibre(taille))
             {

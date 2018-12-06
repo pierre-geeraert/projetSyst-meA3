@@ -51,15 +51,17 @@ namespace UnitTestProjectModel
 
         }
 
+
+
         [TestMethod]
         public void payerTest()
         {
             Client cli = new Client();
-            maitreHotel mh = new maitreHotel();
+            Menu menu = new Menu();
 
 
-            int expectedResult = 50;
-            int actualResult = cli.payer();
+            int expectedResult = (1);
+            int actualResult = cli.payer(menu);
 
             Assert.AreEqual(expectedResult, actualResult);
 
