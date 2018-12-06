@@ -61,7 +61,7 @@ namespace UnitTestProjectModel
             Menu menu = new Menu();
 
 
-            int expectedResult = (1);
+            int expectedResult = 3;
             int actualResult = cli.payer(menu);
 
             Assert.AreEqual(expectedResult, actualResult);

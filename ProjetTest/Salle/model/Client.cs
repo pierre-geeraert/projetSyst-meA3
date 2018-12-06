@@ -54,9 +54,9 @@ namespace Salle.model
             List<(int Prix, string Name)> dessert = obj.dessert();
             int choixdessert = rnd.Next(dessert.Count);
 
-            
 
-            return starter[choixstarter].Prix;
+
+            return starter[choixstarter].Prix + starter[choixDish].Prix + starter[choixdessert].Prix;
         }
     }
 }
