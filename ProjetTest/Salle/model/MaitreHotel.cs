@@ -5,6 +5,23 @@ namespace Salle.model
 {
     public class maitreHotel
     {
+        private string _observerState;
+        private Client _subject;
+        private string _name;
+
+        private static maitreHotel instance = null;
+        private static readonly object mylock = new object();
+
+        public maitreHotel(Client subject)
+        {
+            this._subject = subject;
+        }
+
+        public maitreHotel()
+        {
+
+        }
+
         public (int , int) tableLibre(int taille)
         {
             int libreX = 0;
@@ -32,6 +49,24 @@ namespace Salle.model
                 }
             }
             return (libreX, libreY);
+        }
+
+        public static maitreHotel GetInstance()
+        {
+            lock ((mylock))
+            {
+                if (instance == null)
+                {
+                    instance = new maitreHotel();
+                }
+                return instance;
+            }
+        }
+        
+        public void Update()
+        {
+            _observerState = _subject.SubjectState;
+            Console.WriteLine("Le maitre d'hotel à capté des clients. Ils sont {0}", _subject.group);
         }
     }
 }

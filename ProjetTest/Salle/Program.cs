@@ -1,4 +1,5 @@
 ﻿using System;
+using Salle.model;
 
 namespace Salle
 {
@@ -6,7 +7,17 @@ namespace Salle
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Random rnd = new Random();
+
+            for(int i = 0; i < 10; i++)
+            {
+                Client c = new Client();
+                maitreHotel mh = new maitreHotel(c);
+
+                c.Attach(mh);
+                c.parler(mh);
+            }
+            Console.ReadKey();
         }
     }
 }

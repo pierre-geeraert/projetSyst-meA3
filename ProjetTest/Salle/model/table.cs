@@ -8,29 +8,18 @@ namespace Salle.model
     {
         public int tableX;
         public int tableY;
+        public enumTableClient client;
+        public enumTableProprete proprete;
         public int place;
         public bool ok;
 
        
         public Table()
         {
-            enumTableClient client = enumTableClient.vide;
-            enumTableProprete proprete = enumTableProprete.propre;
+            client = enumTableClient.vide;
+            proprete = enumTableProprete.propre;
             tableX = 0;
             tableY = 0;
-        }
-
-        public bool getLibre(int group)
-        {
-            if(place <= group)
-            {
-                ok = true;
-            }
-            else
-            {
-                ok = false;
-            }
-            return ok;
         }
 
         public Table(int x, int y, int _place)
@@ -45,6 +34,19 @@ namespace Salle.model
         public (int, int) getTableCoord()
         {
             return (tableX , tableY);
+        }
+
+        public bool getLibre(int group)
+        {
+            if (place <= group)
+            {
+                ok = true;
+            }
+            else
+            {
+                ok = false;
+            }
+            return ok;
         }
     }
 }

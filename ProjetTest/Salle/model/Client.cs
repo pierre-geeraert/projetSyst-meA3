@@ -10,6 +10,8 @@ namespace Salle.model
         public int group;
         public int clientX;
         public int clientY;
+        private string _subjectState;
+        private List<maitreHotel> _observers = new List<maitreHotel>();
 
         public Client()
         {
@@ -20,6 +22,7 @@ namespace Salle.model
 
         public (int, int) parler(maitreHotel mh)
         {
+            Notify();
             (int, int) libre = mh.tableLibre(group);
             return libre;
         }
@@ -57,6 +60,25 @@ namespace Salle.model
 
 
             return starter[choixstarter].Prix + starter[choixDish].Prix + starter[choixdessert].Prix;
+        }
+
+        public string SubjectState
+        {
+            get { return _subjectState; }
+            set { _subjectState = value; }
+        }
+
+        public void Attach(maitreHotel observer)
+        {
+            _observers.Add(observer);
+        }
+
+        public void Notify()
+        {
+            foreach(maitreHotel mh in _observers)
+            {
+                mh.Update();
+            }
         }
     }
 }
