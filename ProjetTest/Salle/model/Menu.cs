@@ -4,26 +4,32 @@ namespace Salle.model
 {
     public class Menu
     {
-        public List<string> dish()
+        public List<(int Prix, string Name)> starter()
         {
-            List<string> dish = new List<string>();
-            dish.Add("pates");
-
-            return dish;
-        }
-
-        public List<string> starter()
-        {
-            List<string> starter = new List<string>();
-            starter.Add("pates");
+            var starter = new List<(int Prix, string Name)>
+            {
+                (1, "pates")
+            };
 
             return starter;
         }
 
-        public List<string> dessert()
+        public List<(int Prix, string Name)> dish()
         {
-            List<string> dessert = new List<string>();
-            dessert.Add("pates");
+            var dish = new List<(int Prix, string Name)>
+            {
+                (1, "pates")
+            };
+
+            return dish;
+        }
+
+        public List<(int Prix, string Name)> dessert()
+        {
+            var dessert = new List<(int Prix, string Name)>
+            {
+                (1, "pates")
+            };
 
             return dessert;
         }

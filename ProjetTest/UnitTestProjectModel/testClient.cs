@@ -50,5 +50,19 @@ namespace UnitTestProjectModel
             Assert.AreEqual(expectedResult, actualResult);
 
         }
+
+        [TestMethod]
+        public void payerTest()
+        {
+            Client cli = new Client();
+            maitreHotel mh = new maitreHotel();
+
+
+            int expectedResult = 50;
+            int actualResult = cli.payer();
+
+            Assert.AreEqual(expectedResult, actualResult);
+
+        }
     }
 }

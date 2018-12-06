@@ -20,26 +20,32 @@ namespace Salle.model
 
         public int parler(maitreHotel mh)
         {
-            int libre = mh.tableLibre();
+            int libre = mh.tableLibre(group);
             return libre;
         }
 
         public (string, string, string) commande(Menu obj)
         {
-            List<string> dish = obj.dish();
+            List<(int Prix, string Name)> dish = obj.dish();
             int choixDish = rnd.Next(dish.Count);
 
-            List<string> starter = obj.starter();
+            List<(int Prix, string Name)> starter = obj.starter();
             int choixstarter = rnd.Next(starter.Count);
 
-            List<string> dessert = obj.dessert();
+            List<(int Prix, string Name)> dessert = obj.dessert();
             int choixdessert = rnd.Next(dessert.Count);
-            return (starter[choixstarter], dish[choixDish], dessert[choixdessert]);
+
+            return (starter[choixstarter].Name, dish[choixDish].Name, dessert[choixdessert].Name);
         }
 
         public (int, int) placement(maitreRang mr)
         {
             return mr.Place(group);
+        }
+
+        public int payer()
+        {
+            throw new NotImplementedException();
         }
     }
 }

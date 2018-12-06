@@ -9,6 +9,7 @@ namespace Salle.model
         public int tableX;
         public int tableY;
         public int place;
+        public int ok;
 
        
         public Table()
@@ -19,9 +20,12 @@ namespace Salle.model
             tableY = 0;
         }
 
-        public int getLibre()
+        public void getLibre(int group)
         {
-            return 1;
+            if(place <= group)
+            {
+                ok = 1;
+            }
         }
 
         public Table(int x, int y, int _place)
