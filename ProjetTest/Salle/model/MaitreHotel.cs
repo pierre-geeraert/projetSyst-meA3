@@ -31,7 +31,7 @@ namespace Salle.model
                     }
                 }
             }
-            return (1, 2);
+            return (libreX, libreY);
         }
     }
 }

@@ -29,10 +29,5 @@ namespace Salle.model
             }
             return (maitreRangX, maitreRangY);
         }
-
-        public void setX(int _x)
-        {
-            maitreRangX = _x;
-        }
     }
 }
