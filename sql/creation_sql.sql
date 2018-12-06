@@ -1,6 +1,6 @@
 CREATE TABLE Demande_client (ID_commandes int NOT NULL, TableID_Table int NOT NULL, PRIMARY KEY (ID_commandes));
 CREATE TABLE Etape_Recette (ID_Etape int NOT NULL, nom varchar(255) NULL, temps int NULL, Ordre int NULL, RecetteID_Recette int NOT NULL, PRIMARY KEY (ID_Etape));
-CREATE TABLE Etat (ID_Etat int IDENTITY NOT NULL, Nom varchar(255) NULL, PRIMARY KEY (ID_Etat));
+CREATE TABLE Etat (ID_Etat int IDENTITY NOT NULL, etat bit NULL, PRIMARY KEY (ID_Etat));
 CREATE TABLE Ingredient (ID_Ingredient int NOT NULL, nom varchar(255) NULL, quantité int NULL, Stock_ingrédientID_Stock int NOT NULL, PRIMARY KEY (ID_Ingredient));
 CREATE TABLE Ingredient_Etape_Recette (IngredientID_Ingredient int NOT NULL, Etape_RecetteID_Etape int NOT NULL, PRIMARY KEY (IngredientID_Ingredient, Etape_RecetteID_Etape));
 CREATE TABLE Matériel_cuisine (ID_Materiel_cuisine int NOT NULL, nom varchar(255) NULL, quantité int NULL, EtatID_Etat int NOT NULL, PRIMARY KEY (ID_Materiel_cuisine));
