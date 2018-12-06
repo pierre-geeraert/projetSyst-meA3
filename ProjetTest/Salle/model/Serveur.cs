@@ -8,16 +8,10 @@ namespace Salle.model
         int serveurX = 0;
         int serveurY = 0;
 
-        public int marcherTableX(model.Table table)
+        public (int, int) marcherTableCoord(model.Table table)
         {
-            serveurX = table.getTableX();
-            return serveurX;
-        }
-
-        public int marcherTableY(model.Table table)
-        {
-            serveurY = table.getTableY();
-            return serveurX;
+            (serveurX, serveurY) = table.getTableCoord();
+            return (serveurX, serveurY);
         }
     }
 }

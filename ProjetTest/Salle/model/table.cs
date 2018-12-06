@@ -6,14 +6,11 @@ namespace Salle.model
 {
     public class Table
     {
-        int tableX;
+        public int tableX;
+        public int tableY;
+        public int place;
 
-        public int getLibre()
-        {
-            return 1;
-        }
-
-        int tableY;
+       
         public Table()
         {
             enumTableClient client = enumTableClient.vide;
@@ -22,14 +19,23 @@ namespace Salle.model
             tableY = 0;
         }
 
-        public int getTableX()
+        public int getLibre()
         {
-            return tableX;
+            return 1;
         }
 
-        public int getTableY()
+        public Table(int x, int y, int _place)
         {
-            return tableY;
+            enumTableClient client = enumTableClient.vide;
+            enumTableProprete proprete = enumTableProprete.propre;
+            tableX = x;
+            tableY = y;
+            place = _place;
+        }
+
+        public (int, int) getTableCoord()
+        {
+            return (tableX , tableY);
         }
     }
 }

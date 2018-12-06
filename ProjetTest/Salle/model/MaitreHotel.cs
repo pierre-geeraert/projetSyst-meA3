@@ -2,7 +2,7 @@
 
 namespace Salle.model
 {
-    public class MaitreHotel
+    public class maitreHotel
     {
         public int tableLibre()
         {
