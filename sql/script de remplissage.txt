@@ -1,0 +1,109 @@
+BULK INSERT Place
+FROM
+'D:\script\table_place.csv'
+WITH
+(FIELDTERMINATOR=';',
+ROWTERMINATOR='\n',
+FIRSTROW=2);
+
+BULK INSERT Etat
+FROM
+'D:\script\table_etat.csv'
+WITH
+(FIELDTERMINATOR=';',
+ROWTERMINATOR='\n',
+FIRSTROW=2);
+
+BULK INSERT Matériel_salle
+FROM
+'D:\script\table_matériel_salle.csv'
+WITH
+(FIELDTERMINATOR=';',
+ROWTERMINATOR='\n',
+FIRSTROW=2);
+
+BULK INSERT Matériel_Table
+FROM
+'D:\script\table_int_mat_salle.csv'
+WITH
+(FIELDTERMINATOR=';',
+ROWTERMINATOR='\n',
+FIRSTROW=2);
+
+
+BULK INSERT Matériel_cuisine
+FROM
+'D:\script\table_matériel_cuisine.csv'
+WITH
+(FIELDTERMINATOR=';',
+ROWTERMINATOR='\n',
+FIRSTROW=2);
+
+BULK INSERT Matériel_cuisine
+FROM
+'D:\script\table_matériel_cuisine.csv'
+WITH
+(FIELDTERMINATOR=';',
+ROWTERMINATOR='\n',
+FIRSTROW=2);
+
+BULK INSERT Stock_ingrédient
+FROM
+'D:\script\table_stock.csv'
+WITH
+(FIELDTERMINATOR=';',
+ROWTERMINATOR='\n',
+FIRSTROW=2);
+
+BULK INSERT Ingredient
+FROM
+'D:\script\table_ingredients.csv'
+WITH
+(FIELDTERMINATOR=';',
+ROWTERMINATOR='\n',
+FIRSTROW=2);
+
+
+BULK INSERT Ingredient_Etape_Recette
+FROM
+'D:\script\table_int_ingredient_etape.csv'
+WITH
+(FIELDTERMINATOR=';',
+ROWTERMINATOR='\n',
+FIRSTROW=2);
+
+
+BULK INSERT Etape_Recette
+FROM
+'D:\script\table_étape.csv'
+WITH
+(FIELDTERMINATOR=';',
+ROWTERMINATOR='\n',
+FIRSTROW=2);
+
+BULK INSERT Matériel_Etape_recette
+FROM
+'D:\script\table_materiel_etape_recette.csv'
+WITH
+(FIELDTERMINATOR=';',
+ROWTERMINATOR='\n',
+FIRSTROW=2);
+
+
+BULK INSERT Recette
+FROM
+'D:\script\table_recette.csv'
+WITH
+(FIELDTERMINATOR=';',
+ROWTERMINATOR='\n',
+FIRSTROW=2);
+
+BULK INSERT Demande_client
+FROM
+'D:\script\table_demande.csv'
+WITH
+(FIELDTERMINATOR=';',
+ROWTERMINATOR='\n',
+FIRSTROW=2);
+
+
