@@ -1,0 +1,75 @@
+ID;nom;temps;ordre;ID_recette
+1;Separer les blancs des jaunes et les laisser ces derniers dans une demi -coquille;3;1;1
+2;monter les blancs en neige et mettre le gruyére ;5;2;1
+3;mettre la préparation dans un ramequin et faire un trou pour mettre le jaune d'œuf ;2;3;1
+4;enfourner ;5;4;1
+5;Epluchez et coupez la pomme en lamelles, épépinez et coupez la tomate en dés.;5;1;2
+6;Dans une poêle faites revenir les lardons et, dans une autre, faites revenir la pomme  avec une noisette de beurre.;2;2;2
+7;ajouter la laitue, les tomates, les lardons, les quartiers de pommes et les noix puis assaisonnez avec le vinaigre et l'huile d'olive.;5;3;2
+8;Passez le pain recouvert de chèvre au four.;3;4;2
+9;présentez la salade accompagnée de deux tranches de pain au chèvre.;5;5;2
+10;Coupez la betterave en morceaux;4;1;3
+11;Epluchez et hachez l'ail ;4;2;3
+12;ajoutez l'ail, le vinaigre et l'huile. Mélangez le tout. Saupoudrez de persil.;2;3;3
+13;cuire les œufs dans une casserole ;15;1;4
+14;coupez les en 2 , ôtez les jeunes d'œuf que vous mettrez dans un bol;5;2;4
+15;Ajoutez dans le bol la mayonnaise, le thon égoutté et émietté, le sel, le poivre et la ciboulette. Mélangez le tout.;5;3;4
+16;Farcissez les blancs d'oeufs de cette préparation et servez les oeufs mimosa;5;4;4
+17;Hachez les noix. Epluchez et pressez la gousse d'ail.;3;1;5
+18;Dans un bol, écrasez le chèvre frais. Mélangez-le avec l'ail, la crème fraîche, les noix hachées et un filet d'huile d'olive. Salez et poivrez.;1;2;5
+19;Tartinez les tranches de pain de campagne de cette préparation au chèvre et passez les tartines sous le grill du four.;10;3;5
+20;Coupez les blancs de poulet en petits cubes, épluchez l'oignon et émincez-le.;4;1;6
+21;Faites chauffer l'huile dans une poêle et faites-y revenir l'oignon et les morceaux de blancs de poulet.;5;2;6
+22;Quand ils sont dorés, ajoutez le vinaigre et le miel et laissez mijoter, ajoutez la crème et remuez.;5;3;6
+23;Servez aussitôt accompagné de riz.;1;4;6
+24;Tartinez de beurre les tranches de pain de mie sur une face puis parsemez de fromage râpé.;2;1;7
+25;coupez le jambon et déposez le sur le pain ;2;2;7
+26;faire dorer les croques monsieurs ;10;3;7
+27;servir avec une salade verte ;1;4;7
+28;mettre le haché dans une terrine ;1;1;8
+29;melanger les 2 sortes de moutardes;2;2;8
+30;ajouter sel, poivre , jus de citron , persil , ciboulette ;1;3;8
+31;versez le contenu sur la viande ;1;4;8
+32;mélangez ;3;5;8
+33;moulez le steack en forme de dôme , disposez une cuillé de créme fraiche;1;6;8
+34;servez tout de suite ;1;7;8
+35;salez et poivrez la viande hacée et formez les steak;2;1;9
+36;Faites  les cuires dans poêle chaude ;10;2;9
+37;faites chauffer les buns;10;3;9
+38;coupez en rondelles les cornichons;1;4;9
+39;lavez et coupez en rondelles les tomates ;2;5;9
+40;épluchez et émincez les oignons;1;6;9
+41;coupez en tranches le roblochon;1;7;9
+42;placez les steack , le fromage , les tomates , les cornichons , les oignons sur le pain;2;8;9
+43;servez;1;9;9
+44;lavez la laitue ;1;1;10
+45;découpez les blancs de poulet en morceaux;2;2;10
+46;hachez l'ail ;2;3;10
+47;melangez la sauche tartare , le jus de citron , l'ail , le sel et le poivre ;2;4;10
+48;ajoutez la laitue , le poulet , le parmesan , le pain et mélangez ;2;5;10
+49;servez;1;6;10
+50;mettre la farine dans un grand saladier et incorporer les œufs ;5;1;11
+51;ajouter l'huile , le seil , le lait , melanger;4;2;11
+52;moullier avec du lait ;2;3;11
+53;ajouter de l'eau ;1;4;11
+54;cuire la crêpe et servir ;3;5;11
+55;versez la farine , le surcre , la levure , mélangez;3;1;12
+56;cassez et fouettez les œufs , versez dans le puits et melangez;3;2;12
+57;versez le lait , le beurre , le sel et melangez;4;3;12
+58;Cuire la gauffre et la servir;5;4;12
+59;Coupez le chocolat en morceaux, faites-le fondre avec le beurre au bain-marie ou au micro-ondes;5;1;13
+60;Ajoutez les jaunes et le sucre au chocolat fondu, mélangez et faites refroidir ;5;2;13
+61;Battez les blancs en neige avec une pincée de sel et ajoutez-les délicatement à la préparation au chocolat;1;3;13
+62;Versez dans des ramequins;4;4;13
+63;Cassez le chocolat et coupez le beurre en morceaux et faire fondre le tout au micro-ondes , mélangez;5;1;14
+64;fouettez les œufs ;2;2;14
+65;mélangez les 2 préparations , mélangez ;3;3;14
+66;versez dans le moule la préparation ;4;4;14
+67;servez;1;5;14
+68;Epluchez les poires et coupez-les en petits dès. Concassez les spéculoos, sans les réduire en poudre. ;2;1;15
+69;Chauffer de l'eau avec un peu de sucre et stoppez la cuisson dès ébullition;5;2;15
+70;Mélangez le fromage blanc et le mascarpone;2;3;15
+71;Mettez les spéculoos concassés dans des verrines. Humidifiez légèrement avec le sirop obtenu.;2;4;15
+72;Mettez un peu de mélange fromage mascarpone. Ajoutez les poires en dés. ;2;5;15
+73;Encore une couche de fromage mascarpone et de la cannelle pour décorer le dessus;1;6;15
+74;servez;1;7;15

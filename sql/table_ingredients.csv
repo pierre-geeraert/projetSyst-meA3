@@ -1,0 +1,51 @@
+ID;nom;quantité;fk_stock
+1;Œufs;4;1
+2;gruyére;1;2
+3;pomme;1;3
+4;lardons;1;3
+5;laitue;1;5
+6;chévre;1;6
+7;betterave;1;7
+8;ail;1;8
+9;vinaigre;1;9
+10;œufs;2;1
+11;thon;1;10
+12;ail;1;8
+13;chévre;1;6
+14;tranche de pain;1;11
+15;blancs de poulet;1;12
+16;oignons;1;13
+17;miel;1;14
+18;riz;1;15
+19;tranche de pain;2;11
+20;jambon;1;16
+21;gruyére;1;2
+22;laitue;1;5
+23;haché de viande;1;17
+24;jus de citron;1;18
+25;créme fraiche;1;19
+26;haché de viande;1;17
+27;buns;2;20
+28;cornichons;1;21
+29;tomates;1;22
+30;oignons;1;13
+31;roblochon;1;23
+32;laitue;1;5
+33;blancs de poulet;1;12
+34;ail;1;8
+35;parmesan;1;24
+36;farine;1;25
+37;œufs;6;1
+38;lait;1;26
+39;farine;1;25
+40;œufs;6;1
+41;lait;1;26
+42;sucre;1;27
+43;chocolat;1;28
+44;œufs;4;1
+45;chocolat;1;28
+46;œufs;4;1
+47;poires;1;29
+48;sucre;1;27
+49;mascarpone;1;30
+50;speculos;1;31
