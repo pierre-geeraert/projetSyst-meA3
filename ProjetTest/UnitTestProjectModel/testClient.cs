@@ -14,6 +14,7 @@ namespace UnitTestProjectModel
         {
             maitreHotel mh = new maitreHotel();
             Client cli = new Client();
+            cli.group = 4;
 
             (int, int) expectedResult = (1, 2);
             (int, int) actualResult = cli.parler(mh);
@@ -51,17 +52,15 @@ namespace UnitTestProjectModel
 
         }
 
-
-
         [TestMethod]
         public void payerTest()
         {
             Client cli = new Client();
-            Menu menu = new Menu();
+            maitreHotel mh = new maitreHotel();
 
 
-            int expectedResult = (1);
-            int actualResult = cli.payer(menu);
+            int expectedResult = 50;
+            int actualResult = cli.payer();
 
             Assert.AreEqual(expectedResult, actualResult);
 
