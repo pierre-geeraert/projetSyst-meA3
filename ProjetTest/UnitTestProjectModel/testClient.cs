@@ -14,6 +14,7 @@ namespace UnitTestProjectModel
         {
             maitreHotel mh = new maitreHotel();
             Client cli = new Client();
+            cli.group = 4;
 
             (int, int) expectedResult = (1, 2);
             (int, int) actualResult = cli.parler(mh);
