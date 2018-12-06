@@ -18,9 +18,9 @@ namespace Salle.model
             group = rnd.Next(1,8);
         }
 
-        public int parler(maitreHotel mh)
+        public (int, int) parler(maitreHotel mh)
         {
-            int libre = mh.tableLibre(group);
+            (int, int) libre = mh.tableLibre(group);
             return libre;
         }
 

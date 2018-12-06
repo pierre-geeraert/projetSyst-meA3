@@ -15,8 +15,8 @@ namespace UnitTestProjectModel
             maitreHotel mh = new maitreHotel();
             Client cli = new Client();
 
-            int expectedResult = 1;
-            int actualResult = cli.parler(mh);
+            (int, int) expectedResult = (1, 2);
+            (int, int) actualResult = cli.parler(mh);
 
             Assert.AreEqual(expectedResult, actualResult);
 
