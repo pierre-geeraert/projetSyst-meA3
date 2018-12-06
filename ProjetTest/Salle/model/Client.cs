@@ -43,9 +43,20 @@ namespace Salle.model
             return mr.Place(group);
         }
 
-        public int payer()
+        public int payer(Menu obj)
         {
-            throw new NotImplementedException();
+            List<(int Prix, string Name)> dish = obj.dish();
+            int choixDish = rnd.Next(dish.Count);
+
+            List<(int Prix, string Name)> starter = obj.starter();
+            int choixstarter = rnd.Next(starter.Count);
+
+            List<(int Prix, string Name)> dessert = obj.dessert();
+            int choixdessert = rnd.Next(dessert.Count);
+
+
+
+            return starter[choixstarter].Prix + starter[choixDish].Prix + starter[choixdessert].Prix;
         }
     }
 }
