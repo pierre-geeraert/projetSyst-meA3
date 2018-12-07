@@ -11,7 +11,8 @@ namespace Salle2
     {
         static void Main(string[] args)
         {
-            AsynchronousClient.StartClient();
+            ConnectionBDD co = new ConnectionBDD();
+            co.SqlConnetionFactory();
         }
     }
 }

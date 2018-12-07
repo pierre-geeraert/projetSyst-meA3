@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Dp\factory.cs" />
     <Compile Include="model\Client.cs" />
+    <Compile Include="model\ConnectionBDD.cs" />
     <Compile Include="model\Dp\factory.cs" />
     <Compile Include="model\enumTableEtat.cs" />
     <Compile Include="model\ipcClient.cs" />
