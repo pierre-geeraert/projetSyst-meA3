@@ -1,0 +1,17 @@
+ID;Nom;quantité,fk_etat
+1;Assiettes_entrées;150;0
+2;Assiettes_plates;150;0
+3;Assiettes_creuses;30;0
+4;Assiettes_desserts;150;0
+5;Couverts_fourchettes;150;0
+6;Couverts_Couteaux;150;0
+7;Couverts_Cuillères_Soupe;150;0
+9;Couverts_Cuillères_Café;150;0
+10;Verres_eau;150;0
+11;Verres_vin;150;0
+12;Verres_Champagne;150;0
+13;tasses;50;0
+14;Serviettes;150;0
+15;Nappes;40;0
+16;Bouteille_eau;40;0
+17;Corbeilles_pain;40;0
