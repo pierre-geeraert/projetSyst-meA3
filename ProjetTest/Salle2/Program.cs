@@ -20,7 +20,18 @@ namespace Salle2
             {
                 //Si connecter à la base de données alors ce message s'affiche
                 cnn.Open();
-                Console.WriteLine("vous êtes connecté à la base de données ! ");
+                // Création d'une commande SQL en fonction de l'objet connection
+                SqlCommand command = new SqlCommand("Select x from [Place] where type=8", cnn);
+                command.Parameters.AddWithValue("@zip", "india");
+                
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        Console.WriteLine(String.Format("{0}", reader["x"]));
+                    }
+                }
+
                 cnn.Close();
             }
             catch (Exception ex)
