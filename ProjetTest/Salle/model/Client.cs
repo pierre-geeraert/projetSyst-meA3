@@ -38,11 +38,13 @@ namespace Salle.model
             List<(int Prix, string Name)> dessert = obj.dessert();
             int choixdessert = rnd.Next(dessert.Count);
 
+            Console.WriteLine("Je commande " + starter[choixstarter].Name + " " + dish[choixDish].Name + " " + dessert[choixdessert].Name);
             return (starter[choixstarter].Name, dish[choixDish].Name, dessert[choixdessert].Name);
         }
 
         public (int, int) placement(maitreRang mr)
         {
+            (clientX, clientY) = mr.Place(group);
             return mr.Place(group);
         }
 
@@ -58,8 +60,9 @@ namespace Salle.model
             int choixdessert = rnd.Next(dessert.Count);
 
 
-
-            return starter[choixstarter].Prix + starter[choixDish].Prix + starter[choixdessert].Prix;
+            int total = starter[choixstarter].Prix + starter[choixDish].Prix + starter[choixdessert].Prix;
+            Console.WriteLine("Nous payons: " + total);
+            return total;
         }
 
         public string SubjectState
