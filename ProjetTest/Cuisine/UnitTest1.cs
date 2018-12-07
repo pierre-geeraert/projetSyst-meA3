@@ -1,15 +1,14 @@
-using Cuisine;
+﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace testCuisine
+namespace Cuisine
 {
     [TestClass]
-    public class testCommunication
+    public class UnitTest1
     {
         [TestMethod]
-        public void testListener()
+        public void TestMethod1()
         {
-
         }
     }
 }
