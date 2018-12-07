@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{898CD1D1-5C22-445A-B131-47D69E05F487}</ProjectGuid>
+    <ProjectGuid>{2B600C8C-D5E2-4696-AC01-0138BC68861B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Salle2</RootNamespace>
-    <AssemblyName>Salle2</AssemblyName>
+    <RootNamespace>Salle2._0</RootNamespace>
+    <AssemblyName>Salle2.0</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -35,9 +35,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,25 +43,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Client.cs" />
     <Compile Include="Dp\factory.cs" />
+    <Compile Include="enumTableEtat.cs" />
+    <Compile Include="ipcClient.cs" />
+    <Compile Include="MaitreHotel.cs" />
+    <Compile Include="MaitreRang.cs" />
+    <Compile Include="Menu.cs" />
     <Compile Include="model\Client.cs" />
-    <Compile Include="model\ConnectionBDD.cs" />
-    <Compile Include="model\ConnectionBDDStatic.cs" />
     <Compile Include="model\Dp\factory.cs" />
     <Compile Include="model\enumTableEtat.cs" />
     <Compile Include="model\ipcClient.cs" />
-    <Compile Include="model\maitreHotel.cs" />
-    <Compile Include="model\maitreRang.cs" />
+    <Compile Include="model\MaitreHotel.cs" />
+    <Compile Include="model\MaitreRang.cs" />
     <Compile Include="model\Menu.cs" />
     <Compile Include="model\Serveur.cs" />
     <Compile Include="model\Stock.cs" />
     <Compile Include="model\table.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Serveur.cs" />
+    <Compile Include="Stock.cs" />
+    <Compile Include="table.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="view\" />
