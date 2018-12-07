@@ -12,7 +12,8 @@ namespace Salle2
         static void Main(string[] args)
         {
             ConnectionBDD co = new ConnectionBDD();
-            co.SqlConnetionFactory();
+            co.co();
+            co.selecQqch();
         }
     }
 }
