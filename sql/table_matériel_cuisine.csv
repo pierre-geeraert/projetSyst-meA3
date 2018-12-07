@@ -1,18 +1,18 @@
-ID ;Nom;Quantité;fk_etat
-1;Feux_cuisson;5;0
-2;Casseroles;10;0
-3;Poêles;10;0
-4;Four;1;0
-5;Cuillères_bois;10;0
-6;Mixeur;1;0
-7;Bol_salade;5;0
-8;Autocuiseur;2;0
-9;Presse_agrumes;1;0
-10;Tamis;1;0
-11;Entonnoirs;1;0
-12;Couteaux_cuisine;5;0
-13;Frigo;1;0
-14;Lave-vaisselle;1;0
-15;Machine_laver;1;0
-16;Evier;1;0
-17;bol;1;0
+ID ;Nom;Quantité;qunatite_propre
+1;Feux_cuisson;5;5
+2;Casseroles;10;10
+3;Poêles;10;10
+4;Four;1;1
+5;Cuillères_bois;10;10
+6;Mixeur;1;1
+7;Bol_salade;5;5
+8;Autocuiseur;2;2
+9;Presse_agrumes;1;1
+10;Tamis;1;1
+11;Entonnoirs;1;1
+12;Couteaux_cuisine;5;1
+13;Frigo;1;1
+14;Lave-vaisselle;1;1
+15;Machine_laver;1;1
+16;Evier;1;1
+17;bol;1;1
