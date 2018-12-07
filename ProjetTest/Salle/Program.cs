@@ -7,9 +7,11 @@ namespace Salle
     {
         static void Main(string[] args)
         {
+            AsynchronousClient.StartClient();
+
             Random rnd = new Random();
 
-            for(int i = 0; i < 10; i++)
+            /*for(int i = 0; i < 10; i++)
             {
                 Client c = new Client();
                 maitreHotel mh = new maitreHotel(c);
@@ -26,7 +28,7 @@ namespace Salle
                 c.commande(menu);
                 c.payer(menu);
                 Console.WriteLine("\n");
-            }
+            }*/
             Console.ReadKey();
         }
     }
