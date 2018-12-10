@@ -1,0 +1,14 @@
+#
+# Sprite sheet data for MonoGame.
+#
+# To learn how to import these sprites into your MonoGame project visit:
+# https://www.codeandweb.com/texturepacker/monogame
+#
+# Sprite sheet: Cuisine.png (876 x 216)
+# $TexturePacker:SmartUpdate:8918d5998d00ff1495aaca36fa3ab082:5582fc458b72499679741b331d6204ef:84e9cef601c62714f69a02a7f4884e48$
+#
+
+ChefCuisinier;0;848;33;22;29;32;33;0.5454545454545454;0.46551724137931033
+Cuisine;0;1;1;845;211;845;211;0.5;0.5
+Cuisinier;0;848;1;24;30;32;32;0.5;0.4666666666666667
+Plongeur;0;848;64;20;29;32;35;0.5;0.39655172413793105
