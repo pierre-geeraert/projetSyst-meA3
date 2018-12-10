@@ -5,9 +5,9 @@ VisualStudioVersion = 15.0.28307.106
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Salle2", "Salle2\Salle2.csproj", "{898CD1D1-5C22-445A-B131-47D69E05F487}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{DAB4042D-A538-411D-8928-74EE7C6D102F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testSalle", "UnitTestProject1\testSalle.csproj", "{DAB4042D-A538-411D-8928-74EE7C6D102F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cuisine", "Cuisine\Cuisine.csproj", "{1C1EB7C6-8CA0-49D5-9BBD-9A999D79B9E6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testCusine", "Cuisine\testCusine.csproj", "{1C1EB7C6-8CA0-49D5-9BBD-9A999D79B9E6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cuisine2", "Cuisine2\Cuisine2.csproj", "{7604FE4C-FF0D-4E51-B9E6-7A57898CD79F}"
 EndProject

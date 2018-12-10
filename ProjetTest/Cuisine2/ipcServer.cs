@@ -3,6 +3,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
+using Cuisine2;
 
 namespace Cuisine
 {
@@ -16,6 +17,8 @@ namespace Cuisine
         public byte[] buffer = new byte[BufferSize];
         // Received data string.  
         public StringBuilder sb = new StringBuilder();
+
+        
     }
 
     public class AsynchronousSocketListener
@@ -87,6 +90,7 @@ namespace Cuisine
         public static void ReadCallback(IAsyncResult ar)
         {
             String content = String.Empty;
+            Commande commande = new Commande();
 
             // Retrieve the state object and the handler socket  
             // from the asynchronous state object.  
@@ -113,6 +117,7 @@ namespace Cuisine
                     // All the data has been read from the   
                     // client. Display it on the console.  
                     Console.WriteLine("{0}", str);
+                    commande.ajoutCommande(str);
                     // Echo the data back to the client.  
                     Send(handler, content);
                 }
