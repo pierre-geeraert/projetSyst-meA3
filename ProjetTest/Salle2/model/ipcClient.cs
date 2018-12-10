@@ -34,7 +34,7 @@ namespace Salle2.model
         // The response from the remote device.  
         private static String response = String.Empty;
 
-        public static void StartClient()
+        public static void StartClient(string commande)
         {
             // Connect to a remote device.  
             try
@@ -56,15 +56,12 @@ namespace Salle2.model
                 connectDone.WaitOne();
 
                 // Send test data to the remote device.  
-                Send(client, "J'enverrai ici les commandes");
+                Send(client, commande);
                 sendDone.WaitOne();
 
                 // Receive the response from the remote device.  
                 Receive(client);
                 receiveDone.WaitOne();
-
-                // Write the response to the console.  
-                Console.WriteLine("Response received : {0}", response);
 
                 // Release the socket.  
                 client.Shutdown(SocketShutdown.Both);
@@ -86,9 +83,6 @@ namespace Salle2.model
 
                 // Complete the connection.  
                 client.EndConnect(ar);
-
-                Console.WriteLine("Socket connected to {0}",
-                    client.RemoteEndPoint.ToString());
 
                 // Signal that the connection has been made.  
                 connectDone.Set();
@@ -135,8 +129,7 @@ namespace Salle2.model
                     state.sb.Append(Encoding.ASCII.GetString(state.buffer, 0, bytesRead));
 
                     // Get the rest of the data.  
-                    client.BeginReceive(state.buffer, 0, StateObject.BufferSize, 0,
-                        new AsyncCallback(ReceiveCallback), state);
+                    client.BeginReceive(state.buffer, 0, StateObject.BufferSize, 0, new AsyncCallback(ReceiveCallback), state);
                 }
                 else
                 {
@@ -171,10 +164,6 @@ namespace Salle2.model
             {
                 // Retrieve the socket from the state object.  
                 Socket client = (Socket)ar.AsyncState;
-
-                // Complete sending the data to the remote device.  
-                int bytesSent = client.EndSend(ar);
-                Console.WriteLine("Sent {0} bytes to server.", bytesSent);
 
                 // Signal that all bytes have been sent.  
                 sendDone.Set();
