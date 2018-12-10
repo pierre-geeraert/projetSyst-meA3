@@ -1,7 +1,0 @@
-BULK INSERT projet1.dbo.Matériel_Etape_recette
-FROM
-'C:\Users\MSSQLSERVER\Documents\table_materiel_etape_recette.csv'
-WITH
-(FIELDTERMINATOR=';',
-ROWTERMINATOR='\n',
-FIRSTROW=2);
