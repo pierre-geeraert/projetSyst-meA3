@@ -12,12 +12,8 @@ namespace Cuisine2
         public int tempsPlat(string actuel)
         {
             int time = 50;
+            Thread.Sleep(time);
             return time;
-        }
-
-        public void cuisiner(string plat)
-        {
-            Thread.Sleep(tempsPlat(plat));
         }
     }
 }
