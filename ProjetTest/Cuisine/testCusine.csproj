@@ -49,6 +49,10 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD:ProjetTest/Cuisine/testCusine.csproj
+=======
+    <Compile Include="testChef.cs" />
+>>>>>>> master:ProjetTest/Cuisine/testCusine.csproj
     <Compile Include="testCusinier.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

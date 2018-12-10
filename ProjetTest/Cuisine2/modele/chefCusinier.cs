@@ -12,6 +12,7 @@ namespace Cuisine2
         public int tempsPlat(string actuel)
         {
             int time = 50;
+<<<<<<< HEAD
             return time;
         }
 
@@ -19,5 +20,10 @@ namespace Cuisine2
         {
             Thread.Sleep(tempsPlat(plat));
         }
+=======
+            Thread.Sleep(time);
+            return time;
+        }
+>>>>>>> master
     }
 }

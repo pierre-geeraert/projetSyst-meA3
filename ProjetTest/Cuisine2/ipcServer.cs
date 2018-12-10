@@ -21,30 +21,21 @@ namespace Cuisine
         
     }
 
-    public class AsynchronousSocketListener
+    public class SocketListener
     {
-        // Thread signal.  
-        public static ManualResetEvent allDone = new ManualResetEvent(false);
-
-        public AsynchronousSocketListener()
+        public static void StartServer()
         {
-        }
-
-        public static void StartListening()
-        {
-            // Establish the local endpoint for the socket.  
-            // The DNS name of the computer  
-            // running the listener is "host.contoso.com".  
-            IPHostEntry ipHostInfo = Dns.GetHostEntry("localhost");
-            IPAddress ipAddress = ipHostInfo.AddressList[0];
+            // Get Host IP Address that is used to establish a connection  
+            // In this case, we get one IP address of localhost that is IP : 127.0.0.1  
+            // If a host has multiple addresses, you will get a list of addresses  
+            IPHostEntry host = Dns.GetHostEntry("localhost");
+            IPAddress ipAddress = host.AddressList[0];
             IPEndPoint localEndPoint = new IPEndPoint(ipAddress, 11000);
 
-            // Create a TCP/IP socket.  
-            Socket listener = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
 
-            // Bind the socket to the local endpoint and listen for incoming connections.  
             try
             {
+<<<<<<< HEAD
                 listener.Bind(localEndPoint);
                 listener.Listen(100);
 
@@ -96,16 +87,25 @@ namespace Cuisine
             // from the asynchronous state object.  
             StateObject state = (StateObject)ar.AsyncState;
             Socket handler = state.workSocket;
+=======
 
-            // Read data from the client socket.   
-            int bytesRead = handler.EndReceive(ar);
+                // Create a Socket that will use Tcp protocol      
+                Socket listener = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
+                // A Socket must be associated with an endpoint using the Bind method  
+                listener.Bind(localEndPoint);
+                // Specify how many requests a Socket can listen before it gives Server busy response.  
+                // We will listen 10 requests at a time  
+                listener.Listen(10);
+>>>>>>> master
 
-            if (bytesRead > 0)
-            {
-                // There  might be more data, so store the data received so far.  
-                state.sb.Append(Encoding.ASCII.GetString(
-                    state.buffer, 0, bytesRead));
+                Console.WriteLine("Waiting for a connection...");
+                Socket handler = listener.Accept();
 
+                // Incoming data from the client.    
+                string data = null;
+                byte[] bytes = null;
+
+<<<<<<< HEAD
                 // Check for end-of-file tag. If it is not there, read   
                 // more data.  
                 content = state.sb.ToString();
@@ -122,14 +122,20 @@ namespace Cuisine
                     Send(handler, content);
                 }
                 else
+=======
+                while (true)
+>>>>>>> master
                 {
-                    // Not all data received. Get more.  
-                    handler.BeginReceive(state.buffer, 0, StateObject.BufferSize, 0,
-                    new AsyncCallback(ReadCallback), state);
+                    bytes = new byte[1024];
+                    int bytesRec = handler.Receive(bytes);
+                    data += Encoding.ASCII.GetString(bytes, 0, bytesRec);
+                    if (data.IndexOf("<EOF>") > -1)
+                    {
+                        break;
+                    }
                 }
-            }
-        }
 
+<<<<<<< HEAD
         private static void Send(Socket handler, String data)
         {
             // Convert the string data to byte data using ASCII encoding.  
@@ -147,15 +153,22 @@ namespace Cuisine
                 // Retrieve the socket from the state object.  
                 Socket handler = (Socket)ar.AsyncState;
 
+=======
+                Console.WriteLine("Text received : {0}", data);
+
+                byte[] msg = Encoding.ASCII.GetBytes(data);
+                handler.Send(msg);
+>>>>>>> master
                 handler.Shutdown(SocketShutdown.Both);
                 handler.Close();
-
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.ToString());
             }
-        }
 
+            Console.WriteLine("\n Press any key to continue...");
+            Console.ReadKey();
+        }
     }
 }

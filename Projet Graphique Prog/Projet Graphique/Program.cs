@@ -13,7 +13,11 @@ namespace Projet_Graphique
         [STAThread]
         static void Main()
         {
+<<<<<<< HEAD
             using (var game = new VueSalle())
+=======
+            using (var game = new Game1())
+>>>>>>> master
                 game.Run();
         }
     }

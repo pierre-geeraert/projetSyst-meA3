@@ -13,6 +13,7 @@
 
 #---------------------------------- Content ---------------------------------#
 
+<<<<<<< HEAD
 #begin Salle.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -25,3 +26,5 @@
 /processorParam:TextureFormat=Color
 /build:Salle.png
 
+=======
+>>>>>>> master

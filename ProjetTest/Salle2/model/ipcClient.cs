@@ -6,8 +6,9 @@ using System.Text;
 
 namespace Salle2.model
 {
-    public class StateObject
+    public class SocketClient
     {
+<<<<<<< HEAD
         // Client socket.  
         public Socket workSocket = null;
         // Size of receive buffer.  
@@ -35,21 +36,27 @@ namespace Salle2.model
         private static String response = String.Empty;
 
         public static void StartClient(string commande)
+=======
+        public static void StartClient()
+>>>>>>> master
         {
-            // Connect to a remote device.  
+            byte[] bytes = new byte[1024];
+
             try
             {
-                // Establish the remote endpoint for the socket.  
-                // The name of the   
-                // remote device is "host.contoso.com".  
-                IPHostEntry ipHostInfo = Dns.GetHostEntry("localhost");
-                IPAddress ipAddress = ipHostInfo.AddressList[0];
-                IPEndPoint remoteEP = new IPEndPoint(ipAddress, port);
+                // Connect to a Remote server  
+                // Get Host IP Address that is used to establish a connection  
+                // In this case, we get one IP address of localhost that is IP : 127.0.0.1  
+                // If a host has multiple addresses, you will get a list of addresses  
+                IPHostEntry host = Dns.GetHostEntry("localhost");
+                IPAddress ipAddress = host.AddressList[0];
+                IPEndPoint remoteEP = new IPEndPoint(ipAddress, 11000);
 
-                // Create a TCP/IP socket.  
-                Socket client = new Socket(ipAddress.AddressFamily,
+                // Create a TCP/IP  socket.    
+                Socket sender = new Socket(ipAddress.AddressFamily,
                     SocketType.Stream, ProtocolType.Tcp);
 
+<<<<<<< HEAD
                 // Connect to the remote endpoint.  
                 client.BeginConnect(remoteEP,
                     new AsyncCallback(ConnectCallback), client);
@@ -73,17 +80,21 @@ namespace Salle2.model
                 Console.WriteLine(e.ToString());
             }
         }
+=======
+                // Connect the socket to the remote endpoint. Catch any errors.    
+                try
+                {
+                    // Connect to Remote EndPoint  
+                    sender.Connect(remoteEP);
+>>>>>>> master
 
-        private static void ConnectCallback(IAsyncResult ar)
-        {
-            try
-            {
-                // Retrieve the socket from the state object.  
-                Socket client = (Socket)ar.AsyncState;
+                    Console.WriteLine("Socket connected to {0}",
+                        sender.RemoteEndPoint.ToString());
 
-                // Complete the connection.  
-                client.EndConnect(ar);
+                    // Encode the data string into a byte array.    
+                    byte[] msg = Encoding.ASCII.GetBytes("This is a test<EOF>");
 
+<<<<<<< HEAD
                 // Signal that the connection has been made.  
                 connectDone.Set();
             }
@@ -92,55 +103,42 @@ namespace Salle2.model
                 Console.WriteLine(e.ToString());
             }
         }
+=======
+                    // Send the data through the socket.    
+                    int bytesSent = sender.Send(msg);
 
-        private static void Receive(Socket client)
-        {
-            try
-            {
-                // Create the state object.  
-                StateObject state = new StateObject();
-                state.workSocket = client;
+                    // Receive the response from the remote device.    
+                    int bytesRec = sender.Receive(bytes);
+                    Console.WriteLine("Echoed test = {0}",
+                        Encoding.ASCII.GetString(bytes, 0, bytesRec));
+>>>>>>> master
 
-                // Begin receiving the data from the remote device.  
-                client.BeginReceive(state.buffer, 0, StateObject.BufferSize, 0,
-                    new AsyncCallback(ReceiveCallback), state);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.ToString());
-            }
-        }
+                    // Release the socket.    
+                    sender.Shutdown(SocketShutdown.Both);
+                    sender.Close();
 
-        private static void ReceiveCallback(IAsyncResult ar)
-        {
-            try
-            {
-                // Retrieve the state object and the client socket   
-                // from the asynchronous state object.  
-                StateObject state = (StateObject)ar.AsyncState;
-                Socket client = state.workSocket;
-
-                // Read data from the remote device.  
-                int bytesRead = client.EndReceive(ar);
-
-                if (bytesRead > 0)
+                }
+                catch (ArgumentNullException ane)
                 {
+<<<<<<< HEAD
                     // There might be more data, so store the data received so far.  
                     state.sb.Append(Encoding.ASCII.GetString(state.buffer, 0, bytesRead));
 
                     // Get the rest of the data.  
                     client.BeginReceive(state.buffer, 0, StateObject.BufferSize, 0, new AsyncCallback(ReceiveCallback), state);
+=======
+                    Console.WriteLine("ArgumentNullException : {0}", ane.ToString());
+>>>>>>> master
                 }
-                else
+                catch (SocketException se)
                 {
-                    // All the data has arrived; put it in response.  
-                    if (state.sb.Length > 1)
-                    {
-                        response = state.sb.ToString();
-                    }
-                    // Signal that all bytes have been received.  
-                    receiveDone.Set();
+                    Console.WriteLine("SocketException : {0}", se.ToString());
                 }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Unexpected exception : {0}", e.ToString());
+                }
+<<<<<<< HEAD
             }
             catch (Exception e)
             {
@@ -167,6 +165,9 @@ namespace Salle2.model
 
                 // Signal that all bytes have been sent.  
                 sendDone.Set();
+=======
+
+>>>>>>> master
             }
             catch (Exception e)
             {
