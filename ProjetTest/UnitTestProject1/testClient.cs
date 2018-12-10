@@ -16,10 +16,11 @@ namespace UnitTestProjectModel
             Client cli = new Client();
             cli.group = 4;
 
-            (int, int) expectedResult = (1, 2);
-            (int, int) actualResult = cli.parler(mh);
+            cli.parler();
 
-            Assert.AreEqual(expectedResult, actualResult);
+            (int, int) expectedResult = (1, 2);
+
+            Assert.AreEqual(expectedResult, mh.tableLibre(cli.group));
 
         }
 
@@ -32,7 +33,7 @@ namespace UnitTestProjectModel
             maitreRang mr = new maitreRang();
 
             (int, int) expectedResult = (1, 3);
-            (int, int) actualResult = cli.placement(mr);
+            (int, int) actualResult = cli.placement();
 
             Assert.AreEqual(expectedResult, actualResult);
 

@@ -50,8 +50,7 @@ namespace Cuisine
                     // Set the event to nonsignaled state.  
                     allDone.Reset();
 
-                    // Start an asynchronous socket to listen for connections.  
-                    Console.WriteLine("Waiting for a connection...");
+                    // Start an asynchronous socket to listen for connections.
                     listener.BeginAccept(new AsyncCallback(AcceptCallback), listener);
 
                     // Wait until a connection is made before continuing.  
@@ -108,10 +107,12 @@ namespace Cuisine
                 content = state.sb.ToString();
                 if (content.IndexOf("<EOF>") > -1)
                 {
+                    string str = content.Substring(0, content.LastIndexOf("<EOF>"));
+                    ///Console.WriteLine(*"Read {0} bytes from client.\n Data: {1}", str.Length * 2, str);
+
                     // All the data has been read from the   
                     // client. Display it on the console.  
-                    Console.WriteLine("Read {0} bytes from socket. \n Data : {1}",
-                        content.Length, content);
+                    Console.WriteLine("{0}", str);
                     // Echo the data back to the client.  
                     Send(handler, content);
                 }
@@ -140,10 +141,6 @@ namespace Cuisine
             {
                 // Retrieve the socket from the state object.  
                 Socket handler = (Socket)ar.AsyncState;
-
-                // Complete sending the data to the remote device.  
-                int bytesSent = handler.EndSend(ar);
-                Console.WriteLine("Sent {0} bytes to client.", bytesSent);
 
                 handler.Shutdown(SocketShutdown.Both);
                 handler.Close();

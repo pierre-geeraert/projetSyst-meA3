@@ -17,14 +17,14 @@ namespace Salle2.model
         {
             clientX = 50;
             clientY = 150;
-            group = rnd.Next(1,8);
+            group = rnd.Next(1,10);
         }
 
-        public (int, int) parler(maitreHotel mh)
+        public void parler()
         {
             Notify();
-            (int, int) libre = mh.tableLibre(group);
-            return libre;
+            //(int, int) libre = mh.tableLibre(group);
+            //return libre;
         }
 
         public (string, string, string) commande(Menu obj)
@@ -42,8 +42,9 @@ namespace Salle2.model
             return (starter[choixstarter].Name, dish[choixDish].Name, dessert[choixdessert].Name);
         }
 
-        public (int, int) placement(maitreRang mr)
+        public (int, int) placement()
         {
+            maitreRang mr = new maitreRang();
             (clientX, clientY) = mr.Place(group);
             return mr.Place(group);
         }
@@ -71,16 +72,17 @@ namespace Salle2.model
             set { _subjectState = value; }
         }
 
-        public void Attach(maitreHotel observer)
+
+        public void Attach()
         {
-            _observers.Add(observer);
+            _observers.Add(new maitreHotel());
         }
 
         public void Notify()
         {
             foreach(maitreHotel mh in _observers)
             {
-                mh.Update();
+                mh.Update(group);
             }
         }
     }
