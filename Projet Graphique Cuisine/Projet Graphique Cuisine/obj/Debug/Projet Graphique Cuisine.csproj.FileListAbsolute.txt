@@ -17,3 +17,22 @@ C:\Users\MaxenceArnol\source\repos\Projet Graphique Cuisine\Projet Graphique Cui
 C:\Users\MaxenceArnol\source\repos\Projet Graphique Cuisine\Projet Graphique Cuisine\obj\Debug\Projet Graphique Cuisine.csproj.CopyComplete
 C:\Users\MaxenceArnol\source\repos\Projet Graphique Cuisine\Projet Graphique Cuisine\obj\Debug\Projet Graphique Cuisine.exe
 C:\Users\MaxenceArnol\source\repos\Projet Graphique Cuisine\Projet Graphique Cuisine\obj\Debug\Projet Graphique Cuisine.pdb
+C:\Users\MaxenceArnol\Source\Repos\tapafe\projetSyst-meA3\Projet Graphique Cuisine\Projet Graphique Cuisine\bin\DesktopGL\AnyCPU\Debug\x86\SDL2.dll
+C:\Users\MaxenceArnol\Source\Repos\tapafe\projetSyst-meA3\Projet Graphique Cuisine\Projet Graphique Cuisine\bin\DesktopGL\AnyCPU\Debug\x64\SDL2.dll
+C:\Users\MaxenceArnol\Source\Repos\tapafe\projetSyst-meA3\Projet Graphique Cuisine\Projet Graphique Cuisine\bin\DesktopGL\AnyCPU\Debug\x86\soft_oal.dll
+C:\Users\MaxenceArnol\Source\Repos\tapafe\projetSyst-meA3\Projet Graphique Cuisine\Projet Graphique Cuisine\bin\DesktopGL\AnyCPU\Debug\x64\soft_oal.dll
+C:\Users\MaxenceArnol\Source\Repos\tapafe\projetSyst-meA3\Projet Graphique Cuisine\Projet Graphique Cuisine\bin\DesktopGL\AnyCPU\Debug\x86\libSDL2-2.0.so.0
+C:\Users\MaxenceArnol\Source\Repos\tapafe\projetSyst-meA3\Projet Graphique Cuisine\Projet Graphique Cuisine\bin\DesktopGL\AnyCPU\Debug\x64\libSDL2-2.0.so.0
+C:\Users\MaxenceArnol\Source\Repos\tapafe\projetSyst-meA3\Projet Graphique Cuisine\Projet Graphique Cuisine\bin\DesktopGL\AnyCPU\Debug\x86\libopenal.so.1
+C:\Users\MaxenceArnol\Source\Repos\tapafe\projetSyst-meA3\Projet Graphique Cuisine\Projet Graphique Cuisine\bin\DesktopGL\AnyCPU\Debug\x64\libopenal.so.1
+C:\Users\MaxenceArnol\Source\Repos\tapafe\projetSyst-meA3\Projet Graphique Cuisine\Projet Graphique Cuisine\bin\DesktopGL\AnyCPU\Debug\libSDL2-2.0.0.dylib
+C:\Users\MaxenceArnol\Source\Repos\tapafe\projetSyst-meA3\Projet Graphique Cuisine\Projet Graphique Cuisine\bin\DesktopGL\AnyCPU\Debug\libopenal.1.dylib
+C:\Users\MaxenceArnol\Source\Repos\tapafe\projetSyst-meA3\Projet Graphique Cuisine\Projet Graphique Cuisine\bin\DesktopGL\AnyCPU\Debug\MonoGame.Framework.dll.config
+C:\Users\MaxenceArnol\Source\Repos\tapafe\projetSyst-meA3\Projet Graphique Cuisine\Projet Graphique Cuisine\bin\DesktopGL\AnyCPU\Debug\Projet Graphique Cuisine.exe
+C:\Users\MaxenceArnol\Source\Repos\tapafe\projetSyst-meA3\Projet Graphique Cuisine\Projet Graphique Cuisine\bin\DesktopGL\AnyCPU\Debug\Projet Graphique Cuisine.pdb
+C:\Users\MaxenceArnol\Source\Repos\tapafe\projetSyst-meA3\Projet Graphique Cuisine\Projet Graphique Cuisine\bin\DesktopGL\AnyCPU\Debug\MonoGame.Framework.dll
+C:\Users\MaxenceArnol\Source\Repos\tapafe\projetSyst-meA3\Projet Graphique Cuisine\Projet Graphique Cuisine\obj\Debug\Projet Graphique Cuisine.csprojAssemblyReference.cache
+C:\Users\MaxenceArnol\Source\Repos\tapafe\projetSyst-meA3\Projet Graphique Cuisine\Projet Graphique Cuisine\obj\Debug\Projet Graphique Cuisine.csproj.CoreCompileInputs.cache
+C:\Users\MaxenceArnol\Source\Repos\tapafe\projetSyst-meA3\Projet Graphique Cuisine\Projet Graphique Cuisine\obj\Debug\Projet Graphique Cuisine.csproj.CopyComplete
+C:\Users\MaxenceArnol\Source\Repos\tapafe\projetSyst-meA3\Projet Graphique Cuisine\Projet Graphique Cuisine\obj\Debug\Projet Graphique Cuisine.exe
+C:\Users\MaxenceArnol\Source\Repos\tapafe\projetSyst-meA3\Projet Graphique Cuisine\Projet Graphique Cuisine\obj\Debug\Projet Graphique Cuisine.pdb
