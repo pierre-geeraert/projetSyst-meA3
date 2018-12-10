@@ -9,6 +9,7 @@ namespace Cuisine
         [TestMethod]
         public void TestMethod1()
         {
+
         }
     }
 }
