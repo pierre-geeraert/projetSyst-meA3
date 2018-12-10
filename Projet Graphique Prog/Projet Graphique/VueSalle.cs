@@ -8,20 +8,20 @@ namespace Projet_Graphique
     /// <summary>
     /// This is the main type for your game.
     /// </summary>
-    public class Game1 : Game
+    public class VueSalle : Game
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         private SpriteRender spriteRender;
         private SpriteSheet spriteSheet;
 
-        public Game1()
+        public VueSalle()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
 
-            graphics.PreferredBackBufferWidth = 1900;
-            graphics.PreferredBackBufferHeight = 1200;
+            graphics.PreferredBackBufferWidth = 1400;
+            graphics.PreferredBackBufferHeight = 800;
         }
 
         /// <summary>
@@ -88,9 +88,11 @@ namespace Projet_Graphique
             this.spriteRender.Draw(
                 this.spriteSheet.Sprite(
                     TexturePackerMonoGameDefinitions.ObjetSalle.Salle
+                    
                 ),
                 new Vector2(420, 190)
             );
+
 
             this.spriteBatch.End();
             // TODO: Add your drawing code here

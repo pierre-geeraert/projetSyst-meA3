@@ -5,7 +5,7 @@ namespace Projet_Graphique
     /// <summary>
     /// The main class.
     /// </summary>
-    public static class Program
+    public static class Program2
     {
         /// <summary>
         /// The main entry point for the application.
@@ -13,8 +13,8 @@ namespace Projet_Graphique
         [STAThread]
         static void Main()
         {
-            using (var game = new VueSalle())
-                game.Run();
+            using (var game2 = new VueCuisine())
+                game2.Run();
         }
     }
 }
