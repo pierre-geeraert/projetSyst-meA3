@@ -7,7 +7,7 @@ namespace Cuisine
     {
         public static int Main(String[] args)
         {
-            AsynchronousSocketListener.StartListening();
+            SocketListener.StartServer();
             return 0;
         }
     }

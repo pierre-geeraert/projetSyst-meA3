@@ -5,7 +5,13 @@ namespace Cuisine2
 {
     public class Commande
     {
-        public List<String> liste = new List<String>();
+        public List<String> liste = new List<String>()
+        {
+            "Pates",
+            "Pates",
+            "Pates"
+        };
+
         public Commande()
         {
 

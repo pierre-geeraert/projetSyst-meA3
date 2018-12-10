@@ -83,7 +83,7 @@ namespace Salle2
                 cli.placement();
                 Console.WriteLine(cli.clientX);
                 Console.WriteLine(cli.clientY);
-                AsynchronousClient.StartClient(cli.commande(menu).Item1 + "<EOF>");
+                SocketClient.StartClient();
                 cli.payer(menu);
             }
         }
