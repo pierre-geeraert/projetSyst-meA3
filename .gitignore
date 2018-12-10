@@ -260,3 +260,4 @@ paket-files/
 __pycache__/
 *.pyc
 .vs/slnx.sqlite
+sql/script de remplissage.txt
