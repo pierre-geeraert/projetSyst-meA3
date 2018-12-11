@@ -5,6 +5,9 @@ namespace Cuisine2
 {
     public class Commande
     {
+<<<<<<< HEAD
+        public List<String> liste = new List<String>();
+=======
         public List<String> liste = new List<String>()
         {
             "Pates",
@@ -12,6 +15,7 @@ namespace Cuisine2
             "Pates"
         };
 
+>>>>>>> master
         public Commande()
         {
 

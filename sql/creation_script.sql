@@ -214,7 +214,7 @@ set Quantité_propre = Quantité_propre-1
 where ID_Materiel_cuisine in
       (select Matériel_cuisine.ID_Materiel_cuisine
       from projet1.dbo.Matériel_cuisine , projet1.dbo.Matériel_Etape_recette ,projet1.dbo.Etape_Recette
-      where Etape_Recette.RecetteID_Recette=@id_recipe_in and Etape_Recette.ID_Etape=Matériel_Etape_recette.Etape_RecetteID_Etape and Matériel_Etape_recette.Matériel_cuisineID_Materiel_cuisine=Matériel_cuisine.ID_Materiel_cuisine);
+      where Etape_Recette.RecetteID_Recette=@id_recipe_in and Etape_Recette.ID_Etape=Matériel_Etape_recette.Etape_RecetteID_Etape and Matériel_Etape_recette.Matériel_cuisineID_Materiel_cuisine=Matériel_cuisine.ID_Materiel_cuisine)
 
 /*Loss of food*/
 update projet1.dbo.Stock_ingrédient
@@ -236,7 +236,7 @@ GO
 -- Create date: <07/12/18,,>
 -- Description:	<Procédure permettant d'update la table place en rendant la table à l'état propre ,,>
 -- =============================================
-CREATE PROCEDURE Table_sale @place int
+CREATE PROCEDURE Table_propre @place int
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
