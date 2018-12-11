@@ -3,7 +3,6 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
-using Cuisine2;
 
 namespace Cuisine
 {
@@ -17,8 +16,6 @@ namespace Cuisine
         public byte[] buffer = new byte[BufferSize];
         // Received data string.  
         public StringBuilder sb = new StringBuilder();
-
-        
     }
 
     public class AsynchronousSocketListener
@@ -53,7 +50,8 @@ namespace Cuisine
                     // Set the event to nonsignaled state.  
                     allDone.Reset();
 
-                    // Start an asynchronous socket to listen for connections.
+                    // Start an asynchronous socket to listen for connections.  
+                    Console.WriteLine("Waiting for a connection...");
                     listener.BeginAccept(new AsyncCallback(AcceptCallback), listener);
 
                     // Wait until a connection is made before continuing.  
@@ -90,7 +88,6 @@ namespace Cuisine
         public static void ReadCallback(IAsyncResult ar)
         {
             String content = String.Empty;
-            Commande commande = new Commande();
 
             // Retrieve the state object and the handler socket  
             // from the asynchronous state object.  
@@ -111,13 +108,10 @@ namespace Cuisine
                 content = state.sb.ToString();
                 if (content.IndexOf("<EOF>") > -1)
                 {
-                    string str = content.Substring(0, content.LastIndexOf("<EOF>"));
-                    ///Console.WriteLine(*"Read {0} bytes from client.\n Data: {1}", str.Length * 2, str);
-
                     // All the data has been read from the   
                     // client. Display it on the console.  
-                    Console.WriteLine("{0}", str);
-                    commande.ajoutCommande(str);
+                    Console.WriteLine("Read {0} bytes from socket. \n Data : {1}",
+                        content.Length, content);
                     // Echo the data back to the client.  
                     Send(handler, content);
                 }
@@ -147,6 +141,10 @@ namespace Cuisine
                 // Retrieve the socket from the state object.  
                 Socket handler = (Socket)ar.AsyncState;
 
+                // Complete sending the data to the remote device.  
+                int bytesSent = handler.EndSend(ar);
+                Console.WriteLine("Sent {0} bytes to client.", bytesSent);
+
                 handler.Shutdown(SocketShutdown.Both);
                 handler.Close();
 
@@ -156,6 +154,6 @@ namespace Cuisine
                 Console.WriteLine(e.ToString());
             }
         }
-
+        
     }
 }
