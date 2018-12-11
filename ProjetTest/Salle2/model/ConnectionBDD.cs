@@ -73,17 +73,18 @@ namespace Salle2.model
                 //adapter.TableMappings.Add("Place");
 
                 // Open the connection.
-                
+
                 //Console.WriteLine("The SqlConnection is open.");
 
                 // Create a SqlCommand to retrieve Suppliers data.
-                SqlCommand command = new SqlCommand("dbo.Table_sale", connection);
-                command.CommandType = CommandType.StoredProcedure;
-                //command.CommandType = CommandType.Text;
-
-                command.Parameters.Add("@table", SqlDbType.Int).Value = 5;
+               
                 connection.Open();
-                command.ExecuteNonQuery();
+                SqlCommand com = new SqlCommand("dbo.Table_Sale", connection);
+                com.CommandType = CommandType.StoredProcedure;
+                //Ajouter les paramètres de la procèdure stockée
+                com.Parameters.Add("@Tablex", SqlDbType.Int).Value = //faut recup le x;
+                com.Parameters.Add("@Tabley", SqlDbType.Int).Value = //faut recup le y;
+                com.ExecuteNonQuery();
 
                 // Set the SqlDataAdapter's SelectCommand.
                 //adapter.SelectCommand = command;

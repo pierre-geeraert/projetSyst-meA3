@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Salle2.model
 {
@@ -12,7 +14,7 @@ namespace Salle2.model
         private static maitreHotel instance = null;
 
         private static readonly object mylock = new object();
-        
+
         public maitreHotel()
         {
 
@@ -22,7 +24,7 @@ namespace Salle2.model
         /// Check if one table is availaible for customers
         /// </summary>
         /// <param name="taille"></param>
-        public (int , int) tableLibre(int taille)
+        public (int, int) tableLibre(int taille)
         {
             string connectionString = baseDataSet.GetConnectionString();
             baseDataSet bdd = new baseDataSet();
@@ -33,10 +35,10 @@ namespace Salle2.model
                 //Console.WriteLine(element);
             }
 
-            
+
             int libreX = 0;
             int libreY = 0;
-            
+
             Table table = new Table();
             if (table.getLibre(taille))
             {
@@ -51,7 +53,7 @@ namespace Salle2.model
 
                 if (taille <= 4)
                 {
-                    useTable = vide.Find(x => x.place <= 4) ;
+                    useTable = vide.Find(x => x.place <= 4);
                     libreX = useTable.tableX;
                     libreY = useTable.tableY;
                     table.client = enumTableClient.prise;
@@ -97,5 +99,33 @@ namespace Salle2.model
             Console.WriteLine("Le maitre d'hotel à capté des clients. Ils sont {0}", nbr);
             Console.WriteLine("Vous serez placer à la table {0}", tableLibre(nbr));
         }
+
+        /*public void setTable(string connectionString)
+        {
+            List<int> tableX = new List<int>();
+            //Create a SqlConnection to the Northwind database.
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                //Create a SqlDataAdapter for the PLace table.
+                //SqlDataAdapter adapter = new SqlDataAdapter();
+
+                // A table mapping names the DataTable.
+                //adapter.TableMappings.Add("Place");
+
+                // Open the connection.
+
+                //Console.WriteLine("The SqlConnection is open.");
+
+                // Create a SqlCommand to retrieve Suppliers data.
+
+                connection.Open();
+                SqlCommand com = new SqlCommand("dbo.Table_Sale", connection);
+                com.CommandType = CommandType.StoredProcedure;
+                //Ajouter les paramètres de la procèdure stockée
+                com.Parameters.Add("@Tablex", SqlDbType.Int).Value = //faut recup le x;
+                com.Parameters.Add("@Tabley", SqlDbType.Int).Value = //faut recup le y;
+                com.ExecuteNonQuery();
+
+            }*/
     }
 }

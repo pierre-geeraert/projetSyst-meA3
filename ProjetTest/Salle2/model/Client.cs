@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Salle2.model
 {
@@ -48,6 +50,7 @@ namespace Salle2.model
             (clientX, clientY) = mr.Place(group);
             //TO-DO utliser la proce stocké pour metter la table a occupé.
             return mr.Place(group);
+            
         }
 
         public int payer(Menu obj)
