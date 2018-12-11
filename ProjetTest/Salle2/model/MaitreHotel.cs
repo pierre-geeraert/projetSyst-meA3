@@ -41,37 +41,37 @@ namespace Salle2.model
             if (table.getLibre(taille))
             {
                 List<Table> vide = new List<Table>();
+                Table useTable = new Table();
 
 
                 foreach (int element in listTableX)
                 {
-                    vide.Add(new Table(element, 1, 5));
+                    vide.Add(new Table(element, element, 4));
                 }
 
-                // ajouter à chaque entré dans la table vide
-                foreach (Table element in vide)
+                if (taille <= 4)
                 {
-                    if (taille <= 4 && element.place <= 4)
-                    {
-                        libreX = element.tableX;
-                        libreY = element.tableY;
-                        table.client = enumTableClient.prise;
-                        table.proprete = enumTableProprete.sale;
-                    }
-                    else if (taille <= 8 && taille > 4 && element.place > 4 && element.place <= 8)
-                    {
-                        libreX = element.tableX;
-                        libreY = element.tableY;
-                        table.client = enumTableClient.prise;
-                        table.proprete = enumTableProprete.sale;
-                    }
-                    else
-                    {
-                        libreX = element.tableX;
-                        libreY = element.tableY;
-                        table.client = enumTableClient.prise;
-                        table.proprete = enumTableProprete.sale;
-                    }
+                    useTable = vide.Find(x => x.place <= 4) ;
+                    libreX = useTable.tableX;
+                    libreY = useTable.tableY;
+                    table.client = enumTableClient.prise;
+                    table.proprete = enumTableProprete.sale;
+                }
+                else if (taille <= 8 && taille > 4)
+                {
+                    useTable = vide.Find(x => x.place <= 8 && taille > 4);
+                    libreX = useTable.tableX;
+                    libreY = useTable.tableY;
+                    table.client = enumTableClient.prise;
+                    table.proprete = enumTableProprete.sale;
+                }
+                else
+                {
+                    useTable = vide.Find(x => x.place > 8);
+                    libreX = useTable.tableX;
+                    libreY = useTable.tableY;
+                    table.client = enumTableClient.prise;
+                    table.proprete = enumTableProprete.sale;
                 }
             }
             return (libreX, libreY);

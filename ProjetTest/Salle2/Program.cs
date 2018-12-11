@@ -64,8 +64,8 @@ namespace Salle2
                 // Affichage dans la console
                 Client cli = new Client();
                 cli.Attach();
-                cli.parler();
-                cli.placement();
+                cli.parler(); //maitre va lui dire ou il va etre
+                cli.placement(); //amitre de rang va l'accompagenr a la table choisie avant
                 Console.WriteLine(cli.clientX);
                 Console.WriteLine(cli.clientY);
                 SocketClient.StartClient();

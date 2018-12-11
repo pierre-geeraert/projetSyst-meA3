@@ -59,5 +59,43 @@ namespace Salle2.model
                 return tableX;
             }
         }
+
+        public void setTable(string connectionString)
+        {
+            List<int> tableX = new List<int>();
+            //Create a SqlConnection to the Northwind database.
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                //Create a SqlDataAdapter for the PLace table.
+                //SqlDataAdapter adapter = new SqlDataAdapter();
+
+                // A table mapping names the DataTable.
+                //adapter.TableMappings.Add("Place");
+
+                // Open the connection.
+                
+                //Console.WriteLine("The SqlConnection is open.");
+
+                // Create a SqlCommand to retrieve Suppliers data.
+                SqlCommand command = new SqlCommand("dbo.Table_sale", connection);
+                command.CommandType = CommandType.StoredProcedure;
+                //command.CommandType = CommandType.Text;
+
+                command.Parameters.Add("@table", SqlDbType.Int).Value = 5;
+                connection.Open();
+                command.ExecuteNonQuery();
+
+                // Set the SqlDataAdapter's SelectCommand.
+                //adapter.SelectCommand = command;
+
+                // Fill the DataSet.
+                //DataSet dataSet = new DataSet("Table");
+                //adapter.Fill(dataSet);
+
+                // Close the connection.
+                connection.Close();
+                //Console.WriteLine("The SqlConnection is closed.");
+            }
+        }
     }
 }

@@ -46,6 +46,7 @@ namespace Salle2.model
         {
             maitreRang mr = new maitreRang();
             (clientX, clientY) = mr.Place(group);
+            //TO-DO utliser la proce stocké pour metter la table a occupé.
             return mr.Place(group);
         }
 
