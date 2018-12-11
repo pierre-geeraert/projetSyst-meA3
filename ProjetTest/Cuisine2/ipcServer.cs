@@ -26,6 +26,8 @@ namespace Cuisine
         // Thread signal.  
         public static ManualResetEvent allDone = new ManualResetEvent(false);
 
+        static int count = 0;
+
         public AsynchronousSocketListener()
         {
         }
@@ -41,6 +43,8 @@ namespace Cuisine
 
             // Create a TCP/IP socket.  
             Socket listener = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
+
+            
 
             // Bind the socket to the local endpoint and listen for incoming connections.  
             try
@@ -83,14 +87,14 @@ namespace Cuisine
             // Create the state object.  
             StateObject state = new StateObject();
             state.workSocket = handler;
-            handler.BeginReceive(state.buffer, 0, StateObject.BufferSize, 0,
-                new AsyncCallback(ReadCallback), state);
+            handler.BeginReceive(state.buffer, 0, StateObject.BufferSize, 0, new AsyncCallback(ReadCallback), state);
         }
 
         public static void ReadCallback(IAsyncResult ar)
         {
             String content = String.Empty;
             Commande commande = new Commande();
+            chefCusinier chef = new chefCusinier();
 
             // Retrieve the state object and the handler socket  
             // from the asynchronous state object.  
@@ -103,8 +107,8 @@ namespace Cuisine
             if (bytesRead > 0)
             {
                 // There  might be more data, so store the data received so far.  
-                state.sb.Append(Encoding.ASCII.GetString(
-                    state.buffer, 0, bytesRead));
+                state.sb.Append(Encoding.ASCII.GetString(state.buffer, 0, bytesRead));
+                
 
                 // Check for end-of-file tag. If it is not there, read   
                 // more data.  
@@ -118,6 +122,12 @@ namespace Cuisine
                     // client. Display it on the console.  
                     Console.WriteLine("{0}", str);
                     commande.ajoutCommande(str);
+                    chef.tempsPlat();
+                    foreach(string element in commande.liste)
+                    {
+                        count++;
+                        //Console.WriteLine($"Element #{count}: {element}");
+                    }
                     // Echo the data back to the client.  
                     Send(handler, content);
                 }

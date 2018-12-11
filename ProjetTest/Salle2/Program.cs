@@ -13,33 +13,7 @@ namespace Salle2
     {
         static void Main(string[] args)
         {
-            string connetionString = null;
-            SqlConnection cnn;
-            connetionString = @"Data Source=geeraert.eu;Initial Catalog=projet1;User ID=projet;Password=1234";
-            cnn = new SqlConnection(connetionString);
-            try
-            {
-                //Si connecter à la base de données alors ce message s'affiche
-                cnn.Open();
-                // Création d'une commande SQL en fonction de l'objet connection
-                SqlCommand command = new SqlCommand("Select x from [Place] where type=8", cnn);
-                command.Parameters.AddWithValue("@zip", "india");
-                
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    if (reader.Read())
-                    {
-                        Console.WriteLine(String.Format("{0}", reader["x"]));
-                    }
-                }
-
-                cnn.Close();
-            }
-            catch (Exception ex)
-            {
-                //Si pas connecté ce message s'affiche
-                Console.WriteLine("Vous n'êtes pas à connecter à la base de données ! " + ex.Message);
-            }
+            
 
             Random rnd = new Random();
             /*for (int i = 0; i < 10; i++)
@@ -105,6 +79,7 @@ namespace Salle2
             while (Thread.CurrentThread.IsAlive)
             {
                 maitreHotel mh = new maitreHotel();
+                mh = maitreHotel.GetInstance();
             }
         }
 

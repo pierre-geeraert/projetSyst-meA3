@@ -75,7 +75,9 @@ namespace Salle2.model
 
         public void Attach()
         {
-            _observers.Add(new maitreHotel());
+            maitreHotel mh = new maitreHotel();
+            mh = maitreHotel.GetInstance();
+            _observers.Add(mh);
         }
 
         public void Notify()

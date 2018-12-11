@@ -24,14 +24,29 @@ namespace Salle2.model
         /// <param name="taille"></param>
         public (int , int) tableLibre(int taille)
         {
+            string connectionString = baseDataSet.GetConnectionString();
+            baseDataSet bdd = new baseDataSet();
+            List<int> listTableX = bdd.getTable(connectionString);
+
+            foreach (int element in listTableX)
+            {
+                //Console.WriteLine(element);
+            }
+
+            
             int libreX = 0;
             int libreY = 0;
+            
             Table table = new Table();
             if (table.getLibre(taille))
             {
                 List<Table> vide = new List<Table>();
-                vide.Add(new Table(1, 2, 4));
-                vide.Add(new Table(1, 3, 8));
+
+
+                foreach (int element in listTableX)
+                {
+                    vide.Add(new Table(element, 1, 5));
+                }
 
                 // ajouter à chaque entré dans la table vide
                 foreach (Table element in vide)
@@ -47,6 +62,15 @@ namespace Salle2.model
                     {
                         libreX = element.tableX;
                         libreY = element.tableY;
+                        table.client = enumTableClient.prise;
+                        table.proprete = enumTableProprete.sale;
+                    }
+                    else
+                    {
+                        libreX = element.tableX;
+                        libreY = element.tableY;
+                        table.client = enumTableClient.prise;
+                        table.proprete = enumTableProprete.sale;
                     }
                 }
             }

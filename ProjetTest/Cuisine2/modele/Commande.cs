@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Cuisine2
 {
@@ -14,6 +15,11 @@ namespace Cuisine2
         public void ajoutCommande(string commmande)
         {
             liste.Add(commmande);
+        }
+
+        public string returnCommande(int number)
+        {
+            return liste.ElementAt(number);
         }
     }
 }

@@ -46,6 +46,7 @@
     <Compile Include="modele\chefCusinier.cs" />
     <Compile Include="modele\Commande.cs" />
     <Compile Include="ipcServer.cs" />
+    <Compile Include="modele\masterChef.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

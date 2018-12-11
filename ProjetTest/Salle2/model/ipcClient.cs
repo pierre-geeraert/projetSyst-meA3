@@ -22,29 +22,27 @@ namespace Salle2.model
                 IPAddress ipAddress = host.AddressList[0];
                 IPEndPoint remoteEP = new IPEndPoint(ipAddress, 11000);
 
+
+                Client cli = new Client();
+                Menu menu = new Menu();
+
                 // Create a TCP/IP  socket.    
-                Socket sender = new Socket(ipAddress.AddressFamily,
-                    SocketType.Stream, ProtocolType.Tcp);
+                Socket sender = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
 
                 // Connect the socket to the remote endpoint. Catch any errors.    
                 try
                 {
                     // Connect to Remote EndPoint  
                     sender.Connect(remoteEP);
-
-                    Console.WriteLine("Socket connected to {0}",
-                        sender.RemoteEndPoint.ToString());
-
                     // Encode the data string into a byte array.    
-                    byte[] msg = Encoding.ASCII.GetBytes("This is a test<EOF>");
+                    byte[] msg = Encoding.ASCII.GetBytes(cli.commande(menu) + "<EOF>");
 
                     // Send the data through the socket.    
                     int bytesSent = sender.Send(msg);
 
                     // Receive the response from the remote device.    
                     int bytesRec = sender.Receive(bytes);
-                    Console.WriteLine("Echoed test = {0}",
-                        Encoding.ASCII.GetString(bytes, 0, bytesRec));
+                    //Console.WriteLine("Echoed test = {0}", Encoding.ASCII.GetString(bytes, 0, bytesRec));
 
                     // Release the socket.    
                     sender.Shutdown(SocketShutdown.Both);

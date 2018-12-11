@@ -13,7 +13,7 @@ namespace Salle2.model
         public int place;
         public bool ok;
 
-       
+
         public Table()
         {
             client = enumTableClient.vide;
@@ -33,7 +33,7 @@ namespace Salle2.model
 
         public (int, int) getTableCoord()
         {
-            return (tableX , tableY);
+            return (tableX, tableY);
         }
 
         public bool getLibre(int group)
