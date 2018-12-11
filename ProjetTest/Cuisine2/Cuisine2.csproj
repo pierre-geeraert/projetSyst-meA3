@@ -43,10 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-=======
     <Compile Include="modele\masterChef.cs" />
->>>>>>> master
     <Compile Include="modele\chefCusinier.cs" />
     <Compile Include="modele\Commande.cs" />
     <Compile Include="ipcServer.cs" />
