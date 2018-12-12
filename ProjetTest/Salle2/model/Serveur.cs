@@ -20,6 +20,7 @@ namespace Salle2.model
         {
             if (table.proprete == enumTableProprete.sale)
             {
+                
                 debarasseTable = 1;
             }
             return debarasseTable;

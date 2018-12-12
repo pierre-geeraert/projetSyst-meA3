@@ -46,12 +46,14 @@ namespace Salle2
             Thread threadMr;
             threadMr = new Thread(new ThreadStart(newThreadMr));
 
+            Thread threadServeur;
+            threadServeur = new Thread(new ThreadStart(newThreadServeur));
+
             // Lancement des threads
             threadMh.Start();
             threadClient.Start();
             threadMr.Start();
-
-
+            threadServeur.Start();
         }
 
 
@@ -90,6 +92,15 @@ namespace Salle2
             while (Thread.CurrentThread.IsAlive)
             {
                 maitreRang mr = new maitreRang();
+            }
+        }
+
+        public static void newThreadServeur()
+        {
+            while (Thread.CurrentThread.IsAlive)
+            {
+                Serveur serveur = new Serveur();
+                serveur.debarasse();
             }
         }
     }
