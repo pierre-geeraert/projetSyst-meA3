@@ -97,5 +97,16 @@ namespace Projet_Graphique_Salle
 
             base.Draw(gameTime);
         }
+
+        public void visuel(string name_visual, int x_visual, int y_visual)
+        {
+
+            this.spriteRender.Draw(
+                this.spriteSheet.Sprite(name_visual
+                ),
+                new Vector2((int)x_visual, (int)y_visual)
+            );
+            
+        }
     }
 }
