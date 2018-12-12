@@ -100,5 +100,45 @@ namespace Salle2.model
                 //Console.WriteLine("The SqlConnection is closed.");
             }
         }
+
+        public void cleartable(string connectionString)
+        {
+            //Create a SqlConnection to the Northwind database.
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                //Create a SqlDataAdapter for the PLace table.
+                //SqlDataAdapter adapter = new SqlDataAdapter();
+
+                // A table mapping names the DataTable.
+                //adapter.TableMappings.Add("Place");
+
+                // Open the connection.
+
+                //Console.WriteLine("The SqlConnection is open.");
+
+                // Create a SqlCommand to retrieve Suppliers data.
+
+                int x = tableX[0];
+                int y = tableX[0];
+                connection.Open();
+                SqlCommand com = new SqlCommand("dbo.Table_Propre", connection);
+                com.CommandType = CommandType.StoredProcedure;
+                //Ajouter les paramètres de la procèdure stockée
+                com.Parameters.Add("@Tablex", SqlDbType.Int).Value = x;
+                com.Parameters.Add("@Tabley", SqlDbType.Int).Value = y;
+                com.ExecuteNonQuery();
+
+                // Set the SqlDataAdapter's SelectCommand.
+                //adapter.SelectCommand = command;
+
+                // Fill the DataSet.
+                //DataSet dataSet = new DataSet("Table");
+                //adapter.Fill(dataSet);
+
+                // Close the connection.
+                connection.Close();
+                //Console.WriteLine("The SqlConnection is closed.");
+            }
+        }
     }
 }
