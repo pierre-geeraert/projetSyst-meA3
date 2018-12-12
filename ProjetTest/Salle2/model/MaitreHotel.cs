@@ -11,6 +11,8 @@ namespace Salle2.model
         private Client _subject;
         private string _name;
 
+        private int passage = 0;
+
         private static maitreHotel instance = null;
 
         private static readonly object mylock = new object();
@@ -58,6 +60,16 @@ namespace Salle2.model
                     libreY = useTable.tableY;
                     table.client = enumTableClient.prise;
                     table.proprete = enumTableProprete.sale;
+                    if(passage % 3 == 2)
+                    {
+                        bdd.setTable(connectionString);
+                        passage++;
+                    }
+                    else
+                    {
+                        passage++;
+                    }
+                    
                 }
                 else if (taille <= 8 && taille > 4)
                 {
@@ -66,14 +78,32 @@ namespace Salle2.model
                     libreY = useTable.tableY;
                     table.client = enumTableClient.prise;
                     table.proprete = enumTableProprete.sale;
+                    if (passage % 3 == 2)
+                    {
+                        bdd.setTable(connectionString);
+                        passage++;
+                    }
+                    else
+                    {
+                        passage++;
+                    }
                 }
                 else
                 {
-                    useTable = vide.Find(x => x.place > 8);
+                    useTable = vide.Find(x => x.place > 7);
                     libreX = useTable.tableX;
                     libreY = useTable.tableY;
                     table.client = enumTableClient.prise;
                     table.proprete = enumTableProprete.sale;
+                    if (passage % 3 == 2)
+                    {
+                        bdd.setTable(connectionString);
+                        passage++;
+                    }
+                    else
+                    {
+                        passage++;
+                    };
                 }
             }
             return (libreX, libreY);

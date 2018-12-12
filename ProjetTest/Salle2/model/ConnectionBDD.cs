@@ -8,6 +8,8 @@ namespace Salle2.model
     class baseDataSet
     {
 
+        public List<int> tableX = new List<int>();
+
         public static void ConnectToData(string connectionString)
         {
             
@@ -22,7 +24,6 @@ namespace Salle2.model
 
         public List<int> getTable(string connectionString)
         {
-            List<int> tableX = new List<int>();
             //Create a SqlConnection to the Northwind database.
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -62,7 +63,6 @@ namespace Salle2.model
 
         public void setTable(string connectionString)
         {
-            List<int> tableX = new List<int>();
             //Create a SqlConnection to the Northwind database.
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -77,13 +77,15 @@ namespace Salle2.model
                 //Console.WriteLine("The SqlConnection is open.");
 
                 // Create a SqlCommand to retrieve Suppliers data.
-               
+
+                int x = tableX[0];
+                int y = tableX[0];
                 connection.Open();
                 SqlCommand com = new SqlCommand("dbo.Table_Sale", connection);
                 com.CommandType = CommandType.StoredProcedure;
                 //Ajouter les paramètres de la procèdure stockée
-                com.Parameters.Add("@Tablex", SqlDbType.Int).Value = //faut recup le x;
-                com.Parameters.Add("@Tabley", SqlDbType.Int).Value = //faut recup le y;
+                com.Parameters.Add("@Tablex", SqlDbType.Int).Value = x;
+                com.Parameters.Add("@Tabley", SqlDbType.Int).Value = y;
                 com.ExecuteNonQuery();
 
                 // Set the SqlDataAdapter's SelectCommand.

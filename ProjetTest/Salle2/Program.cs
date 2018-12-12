@@ -11,6 +11,7 @@ namespace Salle2
 {
     class Program
     {
+
         static void Main(string[] args)
         {
             
@@ -47,9 +48,9 @@ namespace Salle2
 
             // Lancement des threads
             threadMh.Start();
-            Console.WriteLine("Mh crée");
             threadClient.Start();
-            
+            threadMr.Start();
+
 
         }
 
