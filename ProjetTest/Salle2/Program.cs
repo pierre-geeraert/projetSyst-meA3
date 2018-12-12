@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Salle2.model;
 using System.Data.SqlClient;
 using System.Threading;
+using System.Diagnostics;
+using System.Runtime.InteropServices;
 
 namespace Salle2
 {
@@ -73,6 +75,7 @@ namespace Salle2
                 Console.WriteLine(cli.clientY);
                 SocketClient.StartClient();
                 cli.payer(menu);
+                threadSuper();
             }
         }
 
@@ -100,7 +103,20 @@ namespace Salle2
             while (Thread.CurrentThread.IsAlive)
             {
                 Serveur serveur = new Serveur();
-                serveur.debarasse();
+                //serveur.debarasse();
+            }
+        }
+
+        public static void threadSuper()
+        {
+            ProcessThreadCollection threads = Process.GetCurrentProcess().Threads;
+            foreach (ProcessThread pt in threads)
+            {
+                Console.WriteLine("  thread:  {0}", pt.Id);
+                Console.WriteLine("    started: {0}", pt.StartTime.ToString());
+                Console.WriteLine("    CPU time: {0}", pt.TotalProcessorTime);
+                Console.WriteLine("    priority: {0}", pt.BasePriority);
+                Console.WriteLine("    thread state: {0}", pt.ThreadState.ToString());
             }
         }
     }
