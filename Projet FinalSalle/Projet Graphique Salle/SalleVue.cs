@@ -91,11 +91,21 @@ namespace Projet_Graphique_Salle
                 new Vector2(420, 190)
             );
 
-
+visual("Client",Program.cli.clientX,Program.cli.clientY);
             this.spriteBatch.End();
             // TODO: Add your drawing code here
 
             base.Draw(gameTime);
+        }
+        public void visual(string name_visual, int x_visual, int y_visual)
+        {
+
+            this.spriteRender.Draw(
+                this.spriteSheet.Sprite(name_visual
+                ),
+                new Vector2((int)x_visual, (int)y_visual)
+            );
+            
         }
     }
 }
