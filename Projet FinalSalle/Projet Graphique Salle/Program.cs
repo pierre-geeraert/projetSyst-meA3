@@ -8,6 +8,7 @@ namespace Projet_Graphique_Salle
     /// <summary>
     /// The main class.
     /// </summary>
+    public static Client cli;
     public static class Program
     {
         /// <summary>
