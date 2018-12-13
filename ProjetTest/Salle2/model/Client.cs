@@ -51,7 +51,6 @@ namespace Salle2.model
         {
             maitreRang mr = new maitreRang();
             (clientX, clientY) = mr.Place(group);
-            log.Write("Client passsé" + (clientX, clientY));
             return mr.Place(group);
             
         }
@@ -70,7 +69,7 @@ namespace Salle2.model
 
             int total = starter[choixstarter].Prix + starter[choixDish].Prix + starter[choixdessert].Prix;
             Console.WriteLine("Nous payons: " + total);
-            log.Write("Client paye" + total);
+            log.Write("Client paye : " + total);
             return total;
         }
 
