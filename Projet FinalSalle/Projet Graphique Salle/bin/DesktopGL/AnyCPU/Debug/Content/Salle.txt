@@ -1,0 +1,15 @@
+#
+# Sprite sheet data for MonoGame.
+#
+# To learn how to import these sprites into your MonoGame project visit:
+# https://www.codeandweb.com/texturepacker/monogame
+#
+# Sprite sheet: Salle.png (872 x 384)
+# $TexturePacker:SmartUpdate:7c710b1ec81d69126c7a631f14a3ca1c:4b6bc17f167bb762063a4341e90dfd93:b48ee326db73369a8bacf61834123587$
+#
+
+ChefRang;0;848;1;22;31;35;32;0.3409090909090909;0.4838709677419355
+Client;0;848;66;16;30;32;32;0.5625;0.4666666666666667
+MaitreHotel;0;848;98;20;28;32;35;0.5;0.375
+Salle;0;1;1;845;380;845;380;0.5;0.5
+Serveur;0;848;34;18;30;32;32;0.3888888888888889;0.5

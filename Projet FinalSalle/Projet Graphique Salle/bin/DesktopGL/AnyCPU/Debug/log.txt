@@ -1,0 +1,18 @@
+13/25/18 14:25 Passé dans client parler
+13/25/18 14:25 Client passsé(4, 4)
+13/25/18 14:25 Client passe une commande
+13/57/18 14:57 Passé dans client parler
+13/57/18 14:57 Client passsé(18, 18)
+13/57/18 14:57 Client passe une commande
+13/06/18 15:06 Passé dans client parler
+13/06/18 15:06 Client passsé(1, 1)
+13/06/18 15:06 Client passe une commande
+13/07/18 15:07 Passé dans client parler
+13/07/18 15:07 Client passsé(4, 4)
+13/07/18 15:07 Client passe une commande
+13/07/18 15:07 Passé dans client parler
+13/07/18 15:07 Client passsé(2, 2)
+13/07/18 15:07 Client passe une commande
+13/14/18 15:14 Passé dans client parler
+13/14/18 15:14 Client passsé(6, 6)
+13/14/18 15:14 Client passe une commande
