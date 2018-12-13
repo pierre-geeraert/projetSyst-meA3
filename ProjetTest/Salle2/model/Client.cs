@@ -43,6 +43,7 @@ namespace Salle2.model
             int choixdessert = rnd.Next(dessert.Count);
 
             Console.WriteLine("Je commande " + starter[choixstarter].Name + " " + dish[choixDish].Name + " " + dessert[choixdessert].Name);
+            log.Write("Client passe une commande");
             return (starter[choixstarter].Name, dish[choixDish].Name, dessert[choixdessert].Name);
         }
 
@@ -50,6 +51,7 @@ namespace Salle2.model
         {
             maitreRang mr = new maitreRang();
             (clientX, clientY) = mr.Place(group);
+            log.Write("Client passsé" + (clientX, clientY));
             return mr.Place(group);
             
         }
@@ -68,6 +70,7 @@ namespace Salle2.model
 
             int total = starter[choixstarter].Prix + starter[choixDish].Prix + starter[choixdessert].Prix;
             Console.WriteLine("Nous payons: " + total);
+            log.Write("Client paye" + total);
             return total;
         }
 

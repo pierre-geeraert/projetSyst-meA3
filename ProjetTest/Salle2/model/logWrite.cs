@@ -10,7 +10,7 @@ namespace Salle2.model
 {
     class logWrite
     {
-        Mutex mutex;
+        Mutex mutex = new Mutex();
 
         public logWrite()
         {
