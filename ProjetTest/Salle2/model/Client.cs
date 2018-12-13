@@ -14,6 +14,7 @@ namespace Salle2.model
         public int clientY;
         private string _subjectState;
         private List<maitreHotel> _observers = new List<maitreHotel>();
+        private logWrite log = new logWrite();
 
         public Client()
         {
@@ -25,6 +26,7 @@ namespace Salle2.model
         public void parler()
         {
             Notify();
+            log.Write("Passé dans client parler");
             //(int, int) libre = mh.tableLibre(group);
             //return libre;
         }

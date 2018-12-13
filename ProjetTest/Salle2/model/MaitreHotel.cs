@@ -30,13 +30,8 @@ namespace Salle2.model
         {
             string connectionString = baseDataSet.GetConnectionString();
             baseDataSet bdd = new baseDataSet();
-            List<int> listTableX = bdd.getTable(connectionString);
-
-            foreach (int element in listTableX)
-            {
-                //Console.WriteLine(element);
-            }
-
+            List<Table> listTableX = bdd.getTable(connectionString);
+            List<int> listTableNbr = bdd.getTableNbr(connectionString);
 
             int libreX = 0;
             int libreY = 0;
@@ -48,21 +43,18 @@ namespace Salle2.model
                 Table useTable = new Table();
 
 
-                foreach (int element in listTableX)
-                {
-                    vide.Add(new Table(element, element, 4));
-                }
+                vide = listTableX;
 
                 if (taille <= 4)
                 {
                     useTable = vide.Find(x => x.place <= 4);
                     libreX = useTable.tableX;
                     libreY = useTable.tableY;
-                    table.client = enumTableClient.prise;
-                    table.proprete = enumTableProprete.sale;
+                    useTable.client = enumTableClient.prise;
+                    useTable.proprete = enumTableProprete.sale;
                     if(passage % 3 == 2)
                     {
-                        bdd.setTable(connectionString);
+                        bdd.setTable(connectionString, libreX, libreY);
                         passage++;
                     }
                     else
@@ -76,11 +68,11 @@ namespace Salle2.model
                     useTable = vide.Find(x => x.place <= 8 && taille > 4);
                     libreX = useTable.tableX;
                     libreY = useTable.tableY;
-                    table.client = enumTableClient.prise;
-                    table.proprete = enumTableProprete.sale;
+                    useTable.client = enumTableClient.prise;
+                    useTable.proprete = enumTableProprete.sale;
                     if (passage % 3 == 2)
                     {
-                        bdd.setTable(connectionString);
+                        bdd.setTable(connectionString, libreX, libreY);
                         passage++;
                     }
                     else
@@ -93,11 +85,11 @@ namespace Salle2.model
                     useTable = vide.Find(x => x.place > 7);
                     libreX = useTable.tableX;
                     libreY = useTable.tableY;
-                    table.client = enumTableClient.prise;
-                    table.proprete = enumTableProprete.sale;
+                    useTable.client = enumTableClient.prise;
+                    useTable.proprete = enumTableProprete.sale;
                     if (passage % 3 == 2)
                     {
-                        bdd.setTable(connectionString);
+                        bdd.setTable(connectionString, libreX, libreY);
                         passage++;
                     }
                     else

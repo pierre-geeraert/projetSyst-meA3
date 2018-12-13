@@ -16,7 +16,7 @@ namespace Cuisine2
         {
             string actuel = chef.gererCommande();
             Console.WriteLine(actuel);
-            int time = 50;
+            int time = 500;
             Thread.Sleep(time);
             return time;
         }

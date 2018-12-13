@@ -46,12 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dp\factory.cs" />
     <Compile Include="model\Client.cs" />
     <Compile Include="model\ConnectionBDD.cs" />
     <Compile Include="model\Dp\factory.cs" />
     <Compile Include="model\enumTableEtat.cs" />
     <Compile Include="model\ipcClient.cs" />
+    <Compile Include="model\logWrite.cs" />
     <Compile Include="model\maitreHotel.cs" />
     <Compile Include="model\maitreRang.cs" />
     <Compile Include="model\Menu.cs" />
@@ -67,6 +67,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="view\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

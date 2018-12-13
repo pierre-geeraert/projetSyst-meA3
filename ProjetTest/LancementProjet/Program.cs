@@ -10,8 +10,8 @@ namespace LancementProjet
     {
         static void Main(string[] args)
         {
-            System.Diagnostics.Process.Start("D:\\EXIA\\UE2\\projet\\code\\tapafe\\projetSyst-meA3\\ProjetTest\\Cuisine2\\bin\\Release\\Cuisine2.exe");
-            System.Diagnostics.Process.Start("D:\\EXIA\\UE2\\projet\\code\\tapafe\\projetSyst-meA3\\ProjetTest\\Salle2\\bin\\Release\\Salle2.exe");
+            System.Diagnostics.Process.Start("D:\\EXIA\\UE2\\projet\\code\\tapafe\\projetSyst-meA3\\ProjetTest\\Cuisine2\\bin\\Debug\\Cuisine2.exe");
+            System.Diagnostics.Process.Start("D:\\EXIA\\UE2\\projet\\code\\tapafe\\projetSyst-meA3\\ProjetTest\\Salle2\\bin\\Debug\\Salle2.exe");
         }
     }
 }

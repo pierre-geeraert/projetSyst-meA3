@@ -19,7 +19,7 @@ namespace Cuisine2
 
         public string returnCommande(int number)
         {
-            return liste.ElementAt(number);
+            return "pates";
         }
     }
 }
