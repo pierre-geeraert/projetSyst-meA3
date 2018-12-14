@@ -7,6 +7,7 @@ namespace Salle2.model
     {
         public int maitreRangX;
         public int maitreRangY;
+        private logWrite log = new logWrite();
 
         public (int, int) Place(int group)
         {

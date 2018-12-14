@@ -10,11 +10,12 @@ namespace Salle2.model
         private int _observerState;
         private Client _subject;
         private string _name;
+        private logWrite log = new logWrite();
 
         private int passage = 0;
 
         private static maitreHotel instance = null;
-
+        
         private static readonly object mylock = new object();
 
         public maitreHotel()
@@ -116,10 +117,13 @@ namespace Salle2.model
             }
         }
 
+
         public void Update(int nbr)
         {
             Console.WriteLine("Le maitre d'hotel à capté des clients. Ils sont {0}", nbr);
+            log.Write("nombre de clients : " + (nbr));
             Console.WriteLine("Vous serez placer à la table {0}", tableLibre(nbr));
+            log.Write("Le maître d'hotel annonce une table libre en : " + tableLibre(nbr));
         }
 
         /*public void setTable(string connectionString)
