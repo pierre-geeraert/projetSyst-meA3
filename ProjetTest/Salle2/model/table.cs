@@ -31,6 +31,30 @@ namespace Salle2.model
             place = _place;
         }
 
+        public enumTableClient enumTableClient
+        {
+            get => default(enumTableClient);
+            set
+            {
+            }
+        }
+
+        public Serveur Serveur
+        {
+            get => default(Serveur);
+            set
+            {
+            }
+        }
+
+        internal baseDataSet baseDataSet
+        {
+            get => default(baseDataSet);
+            set
+            {
+            }
+        }
+
         public (int, int) getTableCoord()
         {
             return (tableX, tableY);

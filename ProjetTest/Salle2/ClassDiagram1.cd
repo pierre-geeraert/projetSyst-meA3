@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Salle2.model.Client">
+    <Position X="5.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QACEAAAAAAAAAABAAAAAaAAAAIAMAABAAAAgAAQAAAA=</HashCode>
+      <FileName>model\Client.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Table" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Salle2.model.baseDataSet">
+    <Position X="12.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAARAAAQAAABIAAAAAAwAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>model\ConnectionBDD.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Salle2.model.logWrite">
+    <Position X="1.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAIAA=</HashCode>
+      <FileName>model\logWrite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Salle2.model.maitreHotel">
+    <Position X="3.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAIAAAABAAAAAAAAAASAEABCBAAAAAAAgAAAIAAAA=</HashCode>
+      <FileName>model\maitreHotel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Table" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Salle2.model.maitreRang">
+    <Position X="8" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAIAASAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>model\maitreRang.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Table" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Salle2.model.Menu">
+    <Position X="3.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAgAAAAAAACAAAAAAACAAAAAAAAQAAQ=</HashCode>
+      <FileName>model\Menu.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Client" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Salle2.model.Serveur">
+    <Position X="10" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAABAAAAAAAgAAQAAAAIAAAAQAAAAA=</HashCode>
+      <FileName>model\Serveur.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Stock" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Salle2.Stock">
+    <Position X="12.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>model\Stock.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Salle2.model.Table">
+    <Position X="8" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABBAAAAQAAAAAAAQQAAAAgCBAAAARA=</HashCode>
+      <FileName>model\table.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="enumTableClient" />
+      <Property Name="Serveur" />
+      <Property Name="baseDataSet" />
+    </ShowAsAssociation>
+  </Class>
+  <Enum Name="Salle2.model.enumTableClient">
+    <Position X="10" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>model\enumTableEtat.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

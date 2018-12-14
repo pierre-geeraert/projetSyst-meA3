@@ -23,6 +23,22 @@ namespace Salle2.model
 
         }
 
+        public StateObject StateObject
+        {
+            get => default(StateObject);
+            set
+            {
+            }
+        }
+
+        public Table Table
+        {
+            get => default(Table);
+            set
+            {
+            }
+        }
+
         /// <summary>
         /// Check if one table is availaible for customers
         /// </summary>

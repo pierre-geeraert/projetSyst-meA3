@@ -33,5 +33,13 @@ namespace Salle2.model
             }
             mutex.ReleaseMutex();
         }
+
+        public static string param_txt_file(int nbr_line)
+        {
+            string _Path = Environment.CurrentDirectory.Replace(@"\bin\debug", "");
+            string path = _Path + @"\param.txt";
+            string[] lines = File.ReadAllLines(@"D:\EXIA\UE2\projet\code\tapafe\projetSyst-meA3\ProjetTest\Salle2\bin\Debug\param.txt");
+            return lines[nbr_line];
+        }
     }
 }

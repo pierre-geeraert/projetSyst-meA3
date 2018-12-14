@@ -9,6 +9,14 @@ namespace Salle2.model
         public int maitreRangY;
         private logWrite log = new logWrite();
 
+        public Table Table
+        {
+            get => default(Table);
+            set
+            {
+            }
+        }
+
         public (int, int) Place(int group)
         {
             maitreHotel mh = new maitreHotel();

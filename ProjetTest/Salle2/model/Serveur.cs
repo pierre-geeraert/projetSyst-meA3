@@ -10,6 +10,14 @@ namespace Salle2.model
         int serveurY = 0;
         int debarasseTable = 0;
 
+        public Stock Stock
+        {
+            get => default(Stock);
+            set
+            {
+            }
+        }
+
         public (int, int) marcherTableCoord(Table table)
         {
             (serveurX, serveurY) = table.getTableCoord();

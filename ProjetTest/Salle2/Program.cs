@@ -19,6 +19,7 @@ namespace Salle2
         {
 
             Menu menu = new Menu();
+            string serveurs = logWrite.param_txt_file(1);
 
             Thread threadClient = new Thread(() => newThreadClient(menu));
 
@@ -30,6 +31,11 @@ namespace Salle2
 
             Thread threadServeur;
             threadServeur = new Thread(new ThreadStart(newThreadServeur));
+
+            logWrite param = new logWrite();
+
+            Console.WriteLine("Il y aura dans la simulation " + serveurs + " serveurs");
+
 
             // Lancement des threads
             threadMh.Start();
@@ -50,10 +56,10 @@ namespace Salle2
                 Client cli = new Client();
                 cli.Attach();
                 cli.parler(); //maitre va lui dire ou il va etre
-                cli.placement(); //amitre de rang va l'accompagenr a la table choisie avant
+                cli.placement(); //maitre de rang va l'accompagenr a la table choisie avant
                 Console.WriteLine(cli.clientX);
                 Console.WriteLine(cli.clientY);
-                AsynchronousClient.StartClient(cli.commande(menu).Item1 + "<EOF>");
+                AsynchronousClient.StartClient(cli.commande(menu).Item1 + " < EOF>");
                 cli.payer(menu);
                 threadSuper();
             }

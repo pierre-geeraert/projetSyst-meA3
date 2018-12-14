@@ -42,7 +42,7 @@ namespace Salle2.model
             List<(int Prix, string Name)> dessert = obj.dessert();
             int choixdessert = rnd.Next(dessert.Count);
 
-            Console.WriteLine("Je commande " + starter[choixstarter].Name + " " + dish[choixDish].Name + " " + dessert[choixdessert].Name);
+            Console.WriteLine("Je commande " + starter[choixstarter].Name + " et " + dish[choixDish].Name + " et " + dessert[choixdessert].Name);
             log.Write("Client passe une commande");
             return (starter[choixstarter].Name, dish[choixDish].Name, dessert[choixdessert].Name);
         }
@@ -92,6 +92,14 @@ namespace Salle2.model
             foreach(maitreHotel mh in _observers)
             {
                 mh.Update(group);
+            }
+        }
+
+        public Table Table
+        {
+            get => default(Table);
+            set
+            {
             }
         }
     }
