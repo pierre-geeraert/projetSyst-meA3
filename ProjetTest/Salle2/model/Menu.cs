@@ -4,6 +4,9 @@ namespace Salle2.model
 {
     public class Menu
     {
+        baseDataSet bdd = new baseDataSet();
+        string connectionString = baseDataSet.GetConnectionString();
+
         public List<(int Prix, string Name)> starter()
         {
             var starter = new List<(int Prix, string Name)>

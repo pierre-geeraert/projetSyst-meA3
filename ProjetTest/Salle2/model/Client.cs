@@ -27,8 +27,6 @@ namespace Salle2.model
         {
             Notify();
             log.Write("Passé dans client parler");
-            //(int, int) libre = mh.tableLibre(group);
-            //return libre;
         }
 
         public (string, string, string) commande(Menu obj)
@@ -51,7 +49,7 @@ namespace Salle2.model
         {
             maitreRang mr = new maitreRang();
             (clientX, clientY) = mr.Place(group);
-            log.Write("Client passsé" + (clientX, clientY));
+            log.Write("Client est placé" + (clientX, clientY));
             return mr.Place(group);
             
         }
